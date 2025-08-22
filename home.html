@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/@themesberg/flowbite@1.3.0/dist/flowbite.min.css" rel="stylesheet"> -->
+</head>
+<body>
+    
+    <!-- navbar begin -->
+    <nav class="fixed top-0 right-0 left-0 bg-[white] w-[100%]">
+        <div class="flex justify-between items-center">
+            <div class="lg:ml-[20px] md:ml-[30px]">
+                <img src="image/bank-logo.png" alt="" class="w-[150px] h-[100px]">
+            </div>
+            <div class="">
+                <div class="hidden lg:flex gap-[30px] text-[#5D7079] lg:ml-[120px]">
+                    <div class="group">
+                        <a href="#" class="text-[blue] relative group">Personal</a>
+                        <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-md min-w-[250px]">
+                            <a href="bankaccount.html" class="block px-4 py-2 text-gray-800 hover:text-[blue] hover:bg-gray-200">Bank Account</a>
+                            <a href="" class="block px-4 py-2 text-gray-800 hover:text-[blue] hover:bg-gray-200">Credit Cards</a>
+                            <a href="mortgages.html" class="block px-4 py-2 text-gray-800 hover:text-[blue] hover:bg-gray-200">Mortgages</a>
+                        </div>
+                    </div>
+                    <a href="business.html" class="hover:text-[blue]">Business</a>
+                    <a href="commercial.html" class="hover:text-[blue]">Commercial</a>
+                    <a href="investment.html" class="hover:text-[blue]">Investments</a>
+                    <a href="loan.html" class="hover:text-[blue]">Loans</a>
+                    <a href="insurance.html" class="hover:text-[blue]">Insurance</a>
+                    <div class="group">
+                        <a href="#" class="text-[blue]">About Us</a>
+                        <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-md min-w-[250px]">
+                            <a href="about.html" class="block px-4 py-2 text-gray-800 hover:text-[blue] hover:bg-gray-200">About Us</a>
+                            <a href="contactus.html" class="block px-4 py-2 text-gray-800 hover:text-[blue] hover:bg-gray-200">Contact Us</a>
+                            <a href="faqs.html" class="block px-4 py-2 text-gray-800 hover:text-[blue] hover:bg-gray-200">FAQ</a>
+                            <a href="privacy.html" class="block px-4 py-2 text-gray-800 hover:text-[blue] hover:bg-gray-200">Privacy Policy</a>
+                            <a href="terms.html" class="block px-4 py-2 text-gray-800 hover:text-[blue] hover:bg-gray-200">Terms</a>
+                        </div>
+                    </div>
+                    <a href="wealth.html" class="hover:text-[blue]">Wealth</a>
+                </div>
+            </div>
+            <div class="mr-[10px] md:mr-[30px]">
+                <div class="text-[30px] w-[60px] border border-[blue] text-center lg:hidden" id="develop">
+                    <button class="fa-solid fa-bars" onclick="greeCee()"></button>
+                </div>
+                <div class="text-[30px] w-[60px] border border-[blue] text-center hidden lg:hidden" id="deploy">
+                    <button class="fa-solid fa-x" onclick="secTion()"></button>
+                </div>
+            </div>
+            <div class="hidden lg:flex gap-5 mr-[30px]">
+                <div class="border border-[green] hover:text-[white] text-[green] p-[10px] rounded-[8px] hover:bg-blue-500">
+                    <a href="">Login</a>
+                </div>
+                <div class="border border-[green] text-[white] bg-[green] p-[10px] rounded-[8px] hover:bg-blue-500">
+                    <a href="">Register</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- mobile nav -->
+        <div class="overflow-scroll transform transition-transform translate-y duration-300 w-[90%] md:w-[85%] mx-auto">
+            <div class="hidden lg:hidden flex flex-col justify-center gap-3 text-center bg-[white] w-[100%] mx-auto h-[355px] font-bold text-[gray]" id="demolish">
+                <div class="flex justify-center items-center text-center  font-bold transition-all ease-out duration-300 border- border-b-1 w-[100%] pb-[8px] pt-[8px] relative">
+                    <div class="lg:hidden hover:text-[blue] flex items-center gap-2">
+                        <span id="plusIcon" class="text-lg cursor-pointer" onclick="onPoint()">+</span>
+                        <span id="minusIcon" class="text-lg cursor-pointer hidden" onclick="outPoint()">-</span>
+                        <span>Personal</span>
+                    </div>
+                    <div class="bg-white rounded-2xl rounded-tl-none rounded-tr-none hidden lg:hidden transition-transform space-y-3 p-2 justify-start text-left w-[100%] absolute top-[100%] left-0" id="dropdownMenu">
+                        <div class="border-b-1">
+                            <a href="bankaccount.html" class="hover:text-[blue] font-bold transition-all ease-out duration-300 w-[100%] pb-[8px] flex justify-center text-center">Bank Account</a>
+                        </div>
+                        <div class="border-b-1">
+                            <a href="" class="hover:text-[blue] font-bold transition-all ease-out duration-300 w-[100%] pb-[8px] flex justify-center text-center">Credit Cards</a>
+                        </div>
+                        <div class="border-b-1">
+                            <a href="mortgages.html" class="hover:text-[blue] font-bold transition-all ease-out duration-300 w-[100%] pb-[8px] flex justify-center text-center">Mortgages</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="business.html" class="hover:text-[blue] font-bold transition-all ease-out duration-300 border-b-1 w-[100%] pb-[8px]">Business</a>
+                <a href="commercial.html" class="hover:text-[blue] font-bold transition-all ease-out duration-300 border-b-1 w-[100%] pb-[8px]">Commercial</a>
+                <a href="investment.html" class="hover:text-[blue] font-bold transition-all ease-out duration-300 border-b-1 w-[100%] pb-[8px]">Investments</a>
+                <a href="loan.html" class="hover:text-[blue] font-bold transition-all ease-out duration-300 border-b-1 w-[100%] pb-[8px]">Loans</a>
+                <a href="insurance.html" class="hover:text-[blue] font-bold transition-all ease-out duration-300 border-b-1 w-[100%] pb-[8px]">Insurance</a>
+                <a href="about.html" class="hover:text-[blue] font-bold transition-all ease-out duration-300 border-b-1 w-[100%] pb-[8px]">About Us</a>
+                <a href="wealth.html" class="hover:text-[blue] font-bold transition-all ease-out duration-300 border-b-1 w-[100%] pb-[8px]">Wealth</a>
+            </div>
+        </div>
+    </nav>
+    <!-- navbar end -->
+
+    <!-- hero session being -->
+    <div class="bg-[url('./image./bank-bg.jpg')] w-[100%] mt-[100px] lg:mt-[100px] h-[80vh] lg:h-screen bg-center bg-cover bg-no-repeat">
+        <div class="w-[90%] lg:w-[100%] text-[white] mx-auto pt-[240px] lg:pt-[170px] md:pt-[390px] flex flex-col gap-5 md:w-[100%] ">
+            <div class="text-blue-500 text-[25px] mx-auto font-bold w-[93%] lg:text-[40px] md:w-[87%] md:text-[40px] lg:w-[80%]">
+                <h2><strong class="text-[]">WEALTH TRUST BANK</strong></h2>
+            </div>
+            <div class="lg:w-[80%] mx-auto md:w-[90%]">
+                <div class="w-[90%] ml-[15px] text-[white] font-bold mx-auto lg:text-[25px] lg:ml-0 lg:w-[60%] md:w-[80%] md:text-[23px]">
+                    <h1>We do banking differently. We believe that people come first, and that everyone deserves a great experience every step of the way – whether it’s face to face, over the phone, online or on our app.</h1>
+                </div>
+            </div>
+        </div>
+        <div class="flex gap-5 mt-[20px] ml-[34px] lg:ml-[135px] md:ml-[60px] md:mt-[50px]">
+            <div class="bg-[red] w-[115px] p-[10px] hover:bg-[blue] text-[11px] text-center rounded-[15px] lg:text-[13px] lg:h-[40px] lg:w-[130px] md:text-[20px] font-semibold text-[white] md:p-[8px] md:h-[50px] md:w-[190px] h-[40px]">
+                <button>CREATE ACCOUNT</button>
+            </div>
+            <div class="bg-[blue] w-[80px] hover:bg-[red] text-[11px] text-[white] rounded-[15px] lg:text-[13px] lg:h-[40px] lg:w-[70px] text-center font-semibold p-[10px] md:text-[20px] md:p-[8px] md:h-[50px] md:w-[100px] h-[40px]">
+                <button>LOGIN</button>
+            </div>
+        </div>
+    </div>
+    <!-- hero session end -->
+    <div class="bg-[#fafafb] w-[100%] lg:h-[460px] md:h-[550px] h-[840px] pt-[40px]">
+        <div class="lg:flex  lg:w-[90%] lg:mt-[40px] mx-auto">
+            <div class="md:flex flex-row md:w-[100%] md:mt-[40px] lg:mt-0 lg:w-[50%]">
+                <div class="border border-gray-300 mx-auto hover:border-[blue] bg-[white] p-[20px] w-[95%] lg:mt-[30px] pt-[40px] md:w-[40%] lg:w-[40%] md:mt-[20px] md:p-[20px] lg:h-[230px]">
+                    <div class="flex flex-col gap-3">
+                        <div class="text-[#2A3F65] font-bold text-[20px]">
+                            <h2>Earn money</h2>
+                        </div>
+                        <div class="text-[#5D7079] lg:w-[95%]">
+                            <p>You’ll get 3.25% AER* / 3.19% Gross* (variable) interest on current account balance. Interest is calculated daily and paid monthly.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="border border-gray-300 mx-auto hover:border-[blue] bg-[white] p-[20px] w-[95%] mt-[30px] md:w-[40%] lg:w-[40%] lg:h-[230px]">
+                    <div class="flex flex-col gap-3">
+                        <div class="text-[#2A3F65] font-bold text-[20px]">
+                            <h2>Custom Saving Spaces</h2>
+                        </div>
+                        <div class="text-[#5D7079] lg:w-[95%]">
+                            <p>Virtual change jars within your account. Save for anything, add a picture, set a target, and track your progress.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="md:w-[100%] md:flex flex-row lg:w-[50%]">
+                <div class="border border-gray-300 mx-auto hover:border-[blue] bg-[white] p-[20px] w-[95%] mt-[30px] lg:w-[40%] md:w-[40%] lg:h-[230px]">
+                    <div class="flex flex-col gap-3">
+                        <div class="text-[#2A3F65] font-bold text-[20px]">
+                            <h2>Spending Insights</h2>
+                        </div>
+                        <div class="text-[#5D7079] lg:w-[100%]">
+                            <p>Understand where your money goes each month with detailed breakdowns of your spending habits and behaviours.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="border border-gray-300 mx-auto hover:border-[blue] bg-[white] p-[20px] w-[95%] mt-[30px] lg:w-[40%] md:w-[40%] lg:h-[230px]">
+                    <div class="flex flex-col gap-3">
+                        <div class="text-[#2A3F65] font-bold text-[20px]">
+                            <h2>24/7 customer support</h2>
+                        </div>
+                        <div class="text-[#5D7079] lg:w-[95%]">
+                            <p>Chat to our global customer support team Wherever and whenever you need to. If you’re awake, then so are we.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="w-[100%] mx-auto mt-[40px] ">
+        <div class="lg:flex items-center w-[95%] mx-auto pb-[50px] lg:mt-[120px] lg:w-[90%]">
+            <div class="container mx-auto p-2 sm:p-4 md:p-6 lg:p-8 mt-[30px] lg:mt-0 lg:w-[50%]">
+                <div id="accordion-collapse" data-accordion="collapse">
+                  <!-- Accordion Item 6 -->
+                  <h2 id="accordion-collapse-heading-6">
+                    <button type="button" class="flex justify-between items-center p-3 sm:p-4 md:p-5 lg:p-6 w-full font-medium text-left text-gray-500 border border-b-0 border-gray-200 rounded-t-xl bg-gray-50 hover:bg-gray-900 text-sm sm:text-base md:text-lg" data-accordion-target="#accordion-collapse-body-6" aria-expanded="true" aria-controls="accordion-collapse-body-6">
+                      <span>1. Your long term investment goal</span>
+                      <svg data-accordion-icon class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 rotate-180 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                      </svg>
+                    </button>
+                  </h2>
+                  <div id="accordion-collapse-body-6" class="hidden" aria-labelledby="accordion-collapse-heading-6">
+                    <div class="p-3 sm:p-4 md:p-5 lg:p-6 border border-b-0 border-gray-200 text-sm sm:text-base md:text-lg text-gray-500">
+                        <span>Your Personal Wealth Advisor can help you find the most efficient way to invest your wealth with a tailored plan. They’ll present the options you have available to grow your wealth and achieve your goals, based on the level of risk you’re willing to take.</span>
+                    </div>
+                  </div>
+                  <!-- Accordion Item 7 -->
+                  <h2 id="accordion-collapse-heading-7">
+                    <button type="button" class="flex justify-between items-center p-3 sm:p-4 md:p-5 lg:p-6 w-full font-medium text-left text-gray-500 border border-gray-200 bg-gray-50 hover:bg-gray-900 text-sm sm:text-base md:text-lg" data-accordion-target="#accordion-collapse-body-7" aria-expanded="false" aria-controls="accordion-collapse-body-7">
+                      <span>2. Protecting yourself and your family</span>
+                      <svg data-accordion-icon class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                      </svg>
+                    </button>
+                  </h2>
+                  <div id="accordion-collapse-body-7" class="hidden" aria-labelledby="accordion-collapse-body-7">
+                    <div class="p-3 sm:p-4 md:p-5 lg:p-6 border border-gray-200 text-sm sm:text-base md:text-lg text-gray-500">
+                      <span>Life can bring unexpected challenges, such as an illness, injury or loss of income. So your plan will also consider your life and income protection needs to bring you peace of mind.</span>
+                    </div>
+                  </div>
+                  <!-- Accordion Item 8 -->
+                   <h2 id="accordion-collapse-heading-8">
+                    <button type="button" class="flex justify-between items-center p-3 sm:p-4 md:p-5 lg:p-6 w-full font-medium text-left text-gray-500 border border-gray-200 bg-gray-50 hover:bg-gray-900 text-sm sm:text-base md:text-lg" data-accordion-target="#accordion-collapse-body-8" aria-expanded="false" aria-controls="accordion-collapse-body-8">
+                      <span>3. Planning for retirement</span>
+                      <svg data-accordion-icon class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                      </svg>
+                    </button>
+                  </h2>
+                  <div id="accordion-collapse-body-8" class="hidden" aria-labelledby="accordion-collapse-body-8">
+                    <div class="p-3 sm:p-4 md:p-5 lg:p-6 border border-gray-200 text-sm sm:text-base md:text-lg text-gray-500">
+                      <span>You may have a single pension, multiple pensions or no pension at all. Either way, your financial plan can show you the path to the retirement you’ve always hoped for.</span>
+                    </div>
+                  </div>
+                  <!-- Accordion Item 9 -->
+                  <h2 id="accordion-collapse-heading-9">
+                    <button type="button" class="flex justify-between items-center p-3 sm:p-4 md:p-5 lg:p-6 w-full font-medium text-left text-gray-500 border border-gray-200 bg-gray-50 hover:bg-gray-900 text-sm sm:text-base md:text-lg" data-accordion-target="#accordion-collapse-body-9" aria-expanded="false" aria-controls="accordion-collapse-body-9">
+                      <span>4. Managing your retirement income</span>
+                      <svg data-accordion-icon class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                      </svg>
+                    </button>
+                  </h2>
+                  <div id="accordion-collapse-body-9" class="hidden" aria-labelledby="accordion-collapse-body-9">
+                    <div class="p-3 sm:p-4 md:p-5 lg:p-6 border border-gray-200 text-sm sm:text-base md:text-lg text-gray-500">
+                      <span>There’s lots of decisions to be made about how best to access your pension. Your plan will help you understand all the options available so you can manage the income from your pension with confidence.</span>
+                    </div>
+                  </div>
+                  <!-- Accordion Item 10 -->
+                  <h2 id="accordion-collapse-heading-10">
+                    <button type="button" class="flex justify-between items-center p-3 sm:p-4 md:p-5 lg:p-6 w-full font-medium text-left text-gray-500 border border-gray-200 bg-gray-50 hover:bg-gray-900 text-sm sm:text-base md:text-lg" data-accordion-target="#accordion-collapse-body-10" aria-expanded="false" aria-controls="accordion-collapse-body-10">
+                      <span>5. Passing on your wealth</span>
+                      <svg data-accordion-icon class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                      </svg>
+                    </button>
+                  </h2>
+                  <div id="accordion-collapse-body-10" class="hidden" aria-labelledby="accordion-collapse-body-10">
+                    <div class="p-3 sm:p-4 md:p-5 lg:p-6 border border-gray-200 text-sm sm:text-base md:text-lg text-gray-500">
+                      <span>When it comes to passing on your wealth to the next generation, you’ll want to do it in the most tax efficient way. Your plan can cover how best to pass on your wealth to those you care for the most.</span>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="w-[95%] mx-auto pt-[30px] lg:w-[45%] pb-[50px]">
+                <img src="image./save-fan.jpg" alt="" class="w-[100%] h-[240px] lg:h-[400px] md:h-[450px]">
+            </div>
+        </div>
+    </div>
+    
+    <div class="bg-[#fafafb] h-[1180px] lg:h-[610px] md:h-[890px]">
+        <div class="w-[100%] mx-auto pt-[50px] md:pt-[100px]">
+            <div class="text-[green] font-semibold w-[45%] mx-auto lg:w-[20%] md:text-[20px] md:w-[27%]">
+                <span>The basics, made better.</span>
+            </div>
+            <div class="text-[#2a3f65] w-[90%] text-center mx-auto text-[20px] md:text-[25px] lg:text-[25px] font-bold mt-[20px]">
+                <p>Better guidance, better service, better financial choices.</p>
+            </div>
+        </div>
+        <div class="lg:flex lg:w-[90%] mx-auto ">
+            <div class="md:flex md:w-[95%] lg:w-[50%]">
+                <div class="border border-[gray] mx-auto hover:bg-[white] p-[20px] w-[95%] lg:w-[45%] mt-[40px] md:w-[40%]">
+                    <div class="flex flex-col gap-3">
+                        <div class="text-[40px] w-[50px] h-[50px]">
+                            <img src="image/email.png" alt="">
+                        </div>
+                        <div class="text-[#2a3f65] font-bold">
+                            <h3>Consultancy</h3>
+                        </div>
+                        <div class="text-[#5D7079]">
+                            <p>We offer professional advice and assistance. Get in touch with our team of experts today.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="border border-[gray] mx-auto hover:bg-[white] p-[20px] w-[95%] lg:w-[45%] mt-[40px] md:w-[40%]">
+                    <div class="flex flex-col gap-3">
+                        <div class="text-[blue] text-[40px]">
+                            <img src="image/transaction.png" alt="" class="w-[50px] h-[50px]">
+                        </div>
+                        <div class="text-[#2a3f65] font-bold">
+                            <h3>Online Banking</h3>
+                        </div>
+                        <div class="text-[#5D7079]">
+                            <p>Send money and pay bills from the comfort of your home with your mobile phone, using our platform</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="md:flex md:w-[95%] lg:w-[50%]">
+                <div class="border border-[gray] mx-auto hover:bg-[white] p-[20px] w-[95%] lg:w-[45%] mt-[40px] md:w-[40%]">
+                    <div class="flex flex-col gap-3">
+                        <div class="text-[40px] text-[#007bd8]">
+                            <img src="image/income(1).png" alt="" class="w-[50px] h-[50px]">
+                        </div>
+                        <div class="text-[#2a3f65] font-bold">
+                            <h3>Loans</h3>
+                        </div>
+                        <div class="text-[#5D7079]">
+                            <p>From salary advances to mortgages, we have a loan to help you achieve your goals</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="border border-[gray] mx-auto hover:bg-[white] p-[20px] lg:w-[45%] w-[95%] mt-[40px] md:w-[40%]">
+                    <div class="flex flex-col gap-3">
+                        <div class="text-[blue] text-[40px]">
+                            <img src="image/exchange-rate.png" alt="" class="w-[50px] h-[50px]">
+                        </div>
+                        <div class="text-[#2a3f65] font-bold">
+                            <h3>Investment Plan</h3>
+                        </div>
+                        <div class="text-[#5D7079]">
+                            <p>Open an account today. With our very friendly rates, you don't need to worry about being overcharged</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="lg:flex items-center lg:w-[90%] mx-auto lg:pt-[40px] lg:pb-[90px] md:mt-[70px] pb-[60px]">
+        <div class="w-[100%] lg:flex lg:w-[80%] md:flex md:w-[100%]">
+            <div class="w-[95%] mx-auto pt-[70px] lg:w-[60%] lg:pt-0 md:w-[45%] md:pt-5">
+                <img src="image/testimonial1.jpg" alt="" class="w-[100%] h-[450px] lg:w-[90%] lg:h-[410px] md:w-[90%] rounded-[10px]">
+            </div>
+            <div class="lg:flex flex-col lg:w-[70%] md:w-[45%] lg:mt-0">
+                <div class="w-[95%] mt-[30px] lg:mt-0 mx-auto">
+                    <img src="image/invest4.jpg" alt="" class="w-[100%] h-[200px] lg:w-[90%] md:w-[90%] rounded-[10px]">
+                </div>
+                <div class="w-[95%] mt-[30px] lg:mt-3 mx-auto">
+                    <img src="image/invest3.jpg" alt="" class="w-[100%] h-[200px] lg:w-[90%] md:w-[90%] rounded-[10px]">
+                </div>
+            </div>
+        </div>
+        <div class="w-[100%] lg:w-[80%]">
+            <div class="flex flex-col gap-[10px] lg:mt-0 mt-[30px]">
+                <div class="text-[green] font-semibold w-[90%] mx-auto lg:w-[90%]">
+                    <span>Investments</span>
+                </div>
+                <div class="font-bold w-[90%] text-[20px] lg:text-[25px] mx-auto text-[#2a3f65] lg:w-[90%]">
+                    <h3>Investing could help grow your savings so that you can do more of what you enjoy in life</h3>
+                </div>
+                <div class="text-[#5D7079] w-[90%] mx-auto lg:w-[90%]">
+                    <p class="w-[100%]">Our Investment Banking teams deliver high-quality strategic advice and creative financing solutions to our clients, including mergers and acquisitions, financing, and risk management transactions.</p>
+                </div>
+            </div>
+            <div class="flex flex-col gap-5 mt-[30px]">
+                <div class="flex items-center gap-3 w-[90%] mx-auto bg-[#f7fbfc] p-[15px] lg:w-[90%] rounded-[50px]">
+                    <div class="text-[blue]">
+                        <i class="fa-regular fa-circle-check"></i>
+                    </div>
+                    <div class="w-[100%]">
+                        <p>Choice on whether you would like online advice.</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3 w-[90%] mx-auto bg-[#f7fbfc] p-[15px] lg:w-[90%] md:w-[85%] rounded-[50px]">
+                    <div class="text-[blue]">
+                        <i class="fa-regular fa-circle-check"></i>
+                    </div>
+                    <div class="w-[100%]">
+                        <p>Control to add, switch, or withdraw your money anytime.</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3 w-[90%] mx-auto bg-[#f7fbfc] p-[15px] lg:w-[90%] md:w-[80%] rounded-[50px]">
+                    <div class="text-[blue]">
+                        <i class="fa-regular fa-circle-check"></i>
+                    </div>
+                    <div class="w-[100%]">
+                        <p>Flexibility of being able to invest on global assets.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-[#007bd8] h-[1800px] lg:h-[1050px] md:h-[1150px]">
+        <div class="flex flex-col gap-5">
+            <div class="text-center text-white font-semibold pt-[40px] md:text-[20px]">
+                <h3>Benefits</h3>
+            </div>
+            <div class="text-white text-center font-bold text-[20px] w-[95%] lg:text-[30px] md:w-[70%] md:text-[25px] mx-auto lg:w-[40%]">
+                <p>Take the stress out of managing property and money</p>
+            </div>
+        </div>
+        <div class="flex flex-col mt-[40px] gap-5">
+            <div class="lg:flex lg:w-[95%] mx-auto md:flex md:w-[100%]">
+                <div class="mx-auto bg-[white] p-[20px] w-[95%] lg:w-[45%] rounded-[5px] md:w-[40%]">
+                    <div class="flex flex-col gap-3">
+                        <div class="text-[40px] border border-[gray] border-dotted rounded-[40px] w-[70px] ">
+                            <img src="image./benefits-1.png" alt="" class="w-[70px] h-[70px] p-[10px]">
+                        </div>
+                        <div class="text-[#2a3f65] font-bold">
+                            <h3>Global Coverage</h3>
+                        </div>
+                        <div class="text-[#5D7079]">
+                            <p>We offer a universal banking model, delivering a seamless service to our clients through a global network of managers and product specialists.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mx-auto bg-[white] p-[20px] w-[95%] lg:w-[45%] mt-[20px] lg:mt-0 rounded-[5px] md:w-[40%] md:mt-0">
+                    <div class="flex flex-col gap-3">
+                        <div class="text-[40px] border border-[gray] border-dotted rounded-[40px] w-[70px] ">
+                            <img src="image./benefits-2.png" alt="" class="w-[70px] h-[70px] p-[10px]">
+                        </div>
+                        <div class="text-[#2a3f65] font-bold">
+                            <h3>Lowest Fee</h3>
+                        </div>
+                        <div class="text-[#5D7079]">
+                            <p>Reduce transaction fees for transfers and pay with a single flat rate–never a percentage. At Wealth Trust Bank, each account gives you low fees and flexible ways to manage your money.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:flex lg:w-[95%] mx-auto lg:mt-[20px] md:flex md:w-[100%] md:mt-[20px]">
+                <div class="mx-auto bg-[white] p-[20px] w-[95%] lg:w-[45%] rounded-[5px] md:w-[40%]">
+                    <div class="flex flex-col gap-3">
+                        <div class="text-[40px] border border-[gray] border-dotted rounded-[40px] w-[70px] ">
+                            <img src="image./benefits-3.png" alt="" class="w-[70px] h-[70px] p-[10px]">
+                        </div>
+                        <div class="text-[#2a3f65] font-bold">
+                            <h3>Simple Transfer</h3>
+                        </div>
+                        <div class="text-[#5D7079]">
+                            <p>Transfer money across the world from the comfort of your home. Send money the way that’s convenient for you.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mx-auto bg-[white] p-[20px] w-[95%] lg:w-[45%] rounded-[5px] mt-[20px] lg:mt-0 md:w-[40%] md:mt-0">
+                    <div class="flex flex-col gap-3">
+                        <div class="text-[40px] border border-[gray] border-dotted rounded-[40px] w-[70px] ">
+                            <img src="image./benefits-4.png" alt="" class="w-[70px] h-[70px] p-[10px]">
+                        </div>
+                        <div class="text-[#2a3f65] font-bold">
+                            <h3>Instant Processing</h3>
+                        </div>
+                        <div class="text-[#5D7079]">
+                            <p>We put the power of money movement in your hands as transfers are processed seamlessly and instantly with no hassle.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:flex lg:w-[95%] mx-auto lg:mt-[20px] md:flex md:w-[100%] md:mt-[20px]">
+                <div class="mx-auto bg-[white] p-[20px] w-[95%] lg:w-[45%] rounded-[5px] md:w-[40%]">
+                    <div class="flex flex-col gap-3">
+                        <div class="text-[40px] border border-[gray] border-dotted rounded-[40px] w-[70px] ">
+                            <img src="image./benefits-5.png" alt="" class="w-[70px] h-[70px] p-[10px]">
+                        </div>
+                        <div class="text-[#2a3f65] font-bold">
+                            <h3>Commitment to security</h3>
+                        </div>
+                        <div class="text-[#5D7079]">
+                            <p>Our encryption, authentication, firewalls, fraud prevention efforts and other security tools help protect your Wealthtrust Bank account.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mx-auto bg-[white] p-[20px] w-[95%] lg:w-[45%] rounded-[5px] mt-[20px] lg:mt-0 md:w-[40%] md:mt-0">
+                    <div class="flex flex-col gap-3">
+                        <div class="text-[40px] border border-[gray] border-dotted rounded-[40px] w-[70px] ">
+                            <img src="image./benefits-6.png" alt="" class="w-[70px] h-[70px] p-[10px]">
+                        </div>
+                        <div class="text-[#2a3f65] font-bold">
+                            <h3>Global 24/7 Support</h3>
+                        </div>
+                        <div class="text-[#5D7079]">
+                            <p>Get in touch with us 24/7 from anywhere in the world. Our global customer support team is always available and well equipped to help.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="lg:w-[95%] lg:flex lg:mt-[40px] mx-auto ">
+        <!-- <div class="w-[100%] mx-auto"> -->
+            <div class="w-[95%] mx-auto mt-[50px] lg:w-[45%] md:w-[90%] md:mt-[100px]">
+                <img src="image/why-choose-us.jpg" alt="" class="w-[100%] lg:w-[100%] md:h-[900px] lg:h-[500px] h-[450px]">
+            </div>
+        <!-- </div> -->
+        <div class="flex flex-col items-center lg:w-[50%]">
+            <div class="w-[100%] flex flex-col gap-3 mt-[40px]">
+                <div class="text-[green] w-[95%] font-semibold mx-auto md:w-[90%]">
+                    <h3>Mobile Banking</h3>
+                </div>
+                <div class="text-[#2a3f65] font-bold w-[95%] mx-auto text-[20px] md:w-[90%] md:text-[25px]">
+                    <span>Secure, convenient, and available 24/7/365</span>
+                </div>
+                <div class="text-[#5D7079] mx-auto w-[95%] md:w-[90%] ">
+                    <h3>Online banking at your fingertips with the Wealthtrust Bank mobile responsive platform. Get convenience and security with Mobile Banking.</h3>
+                </div>
+            </div>
+            <div class="w-[100%] mt-[20px] flex flex-col gap-5 lg:flex">
+                <div class="">
+                    <div class="flex items-center gap-3 w-[95%] mx-auto md:w-[90%]">
+                        <div class="">
+                            <img src="image/clock(1).png" alt="" class="w-[50px] h-[50px]">
+                        </div>
+                        <div class="text-[#2a3f65] font-bold md:text-[20px]">
+                            <h3>Faster And Cheaper</h3>
+                        </div>
+                    </div>
+                    <div class="flex w-[64%] lg:w-[72%] gap-3 mx-auto md:w-[75%] mt-[10px]">
+                        <div class="text-[#007bd8]">
+                            <i class="fa-regular fa-circle-check"></i>
+                        </div>
+                        <div class="font-semibold text-[#5D7079] text-[15px]">
+                            <h3>Transfer money between your accounts, or send to family and friends in minutes.</h3>
+                        </div>
+                    </div>
+                    <div class="flex w-[64%] gap-3 mx-auto mt-[10px] lg:w-[72%] lg:mt-[10px] md:mt-[10px] md:w-[75%]">
+                        <div class="text-[#007bd8]">
+                            <i class="fa-regular fa-circle-check"></i>
+                        </div>
+                        <div class="font-semibold text-[#5D7079] text-[15px]">
+                            <h3>Deposit checks and make payments.</h3>
+                        </div>
+                    </div>
+                    <div class="flex w-[64%] gap-3 mx-auto mt-[10px] lg:w-[72%] lg:mt-[10px] md:w-[75%] md:mt-[10px]">
+                        <div class="text-[#007bd8]">
+                            <i class="fa-regular fa-circle-check"></i>
+                        </div>
+                        <div class="font-semibold text-[#5D7079] text-[15px]">
+                            <h3>Turn your Wealthtrust Bank Debit and Credit Cards on or off, and more.</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="">
+                    <div class="flex items-center gap-3 w-[95%] mx-auto md:w-[90%]">
+                        <div class="">
+                            <img src="image/sheild.png" alt="" class="w-[50px] h-[50px]">
+                        </div>
+                        <div class="text-[#2a3f65] font-bold md:text-[20px]">
+                            <h3>Trusted & Secure</h3>
+                        </div>
+                    </div>
+                    <div class="flex w-[64%] gap-3 mx-auto lg:w-[72%] md:w-[75%]">
+                        <div class="text-[#007bd8]">
+                            <i class="fa-regular fa-circle-check"></i>
+                        </div>
+                        <div class="font-semibold text-[#5D7079] text-[15px]">
+                            <h3>Sophisticated fraud-monitoring tools help us identify unusual activity.Turn your card off if lost or stolen, then back on when it’s recovered</h3>
+                        </div>
+                    </div>
+                    <div class="flex w-[64%] gap-3 mx-auto mt-[10px] lg:w-[72%] lg:mt-[10px] md:w-[75%] md:mt-[10px]">
+                        <div class="text-[#007bd8]">
+                            <i class="fa-regular fa-circle-check"></i>
+                        </div>
+                        <div class="font-semibold text-[#5D7079] text-[15px]">
+                            <h3>Alerts and notifications help you keep track of your transactions and balances.</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="w-[100%] flex flex-col gap-2 lg:mt-[40px] ">
+        <div class="text-[green] font-semibold w-[95%] mx-auto mt-[70px] lg:w-[90%] md:w-[90%]">
+            <h3>Wealthtrust Bank Cards </h3>
+        </div>
+        <div class="text-[#2a3f65] text-[20px] font-bold w-[95%] mx-auto lg:w-[90%] md:text-[25px] md:w-[90%] lg:text-[25px]">
+            <h3>Compare our credit cards</h3>
+        </div>
+        <div class="text-[#5D7079] text-[15px] w-[95%] mx-auto lg:w-[90%] md:w-[90%]">
+            <h1 class="w-[100%] lg:w-[45%] md:w-[90%]">We have a range of credit cards to meet your needs. A credit card could help to spread the cost of a purchase, earn cashback or save on interest payments elsewhere.</h1>
+        </div>
+    </div>
+    <div class="lg:flex flex-row justify-content items-center lg:w-[90%] mx-auto gap-5">
+        <div class="lg:flex gap-5 lg:w-[66%] md:flex md:mt-[40px]">
+            <div class="hover:border hover:border-[blue] transaction-all duration-700 ease-in-out bg-[#f7fbfc] mx-auto p-[20px] lg:p-[30px] w-[95%] lg:w-[50%] md:mt-0 mt-[40px] lg:mt-0 md:w-[40%]">
+                <div class="font-bold text-[black] text-[15px]">
+                    <p>The right credit card for you depends on how you want to use it. You may want to get one to:</p>
+                </div>
+                <ul>
+                    <li>
+                        <div class="flex w-[98%] gap-3 mx-auto mt-[10px] lg:w-[95%] lg:mt-[10px] md:w-[100%] md:mt-[10px]">
+                            <div class="text-[#007bd8]">
+                                <i class="fa-regular fa-circle-check"></i>
+                            </div>
+                            <div class="text-[#5D7079]">
+                                <p>Earn cashback on everything you buy with one of our cashback cards.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex w-[98%] gap-3 mx-auto mt-[10px] lg:w-[95%] lg:mt-[10px] md:w-[100%] md:mt-[10px]">
+                            <div class="text-[#007bd8]">
+                                <i class="fa-regular fa-circle-check"></i>
+                            </div>
+                            <div class="text-[#5D7079]">
+                                <p>Spread the cost of purchases and more.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex w-[98%] gap-3 mx-auto mt-[10px] lg:w-[95%] lg:mt-[10px] md:w-[100%] md:mt-[10px]">
+                            <div class="text-[#007bd8]">
+                                <i class="fa-regular fa-circle-check"></i>
+                            </div>
+                            <div class="text-[#5D7079]">
+                                <p>Reorganise debt.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex w-[98%] gap-3 mx-auto mt-[10px] lg:w-[95%] lg:mt-[10px] md:w-[100%] md:mt-[10px]">
+                            <div class="text-[#007bd8]">
+                                <i class="fa-regular fa-circle-check"></i>
+                            </div>
+                            <div class="text-[#5D7079]">
+                                <p>Enjoy exclusive benefits with our Wealthtrust Bank Mastercard.</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>   
+            </div>
+            <div class="hover:border-1 hover:border-[blue] transition-border duration-300 bg-[#f7fbfc] mx-auto p-[20px] w-[95%] lg:p-[30px] lg:w-[50%] md:mt-0 mt-[30px] lg:mt-0 md:w-[40%]">
+                <div class="font-bold text-[black] text-[15px]">
+                    <p>Use our eligibility checker today to get an idea straightaway</p>
+                </div>
+                <ul>
+                    <li>
+                        <div class="flex w-[98%] gap-3 mx-auto mt-[10px] lg:w-[95%] lg:mt-[10px] md:w-[100%] md:mt-[10px]">
+                            <div class="text-[#007bd8]">
+                                <i class="fa-regular fa-circle-check"></i>
+                            </div>
+                            <div class="text-[#5D7079]">
+                                <p>It's completely free.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex w-[98%] gap-3 mx-auto mt-[10px] lg:w-[95%] lg:mt-[10px] md:w-[100%] md:mt-[10px]">
+                            <div class="text-[#007bd8]">
+                                <i class="fa-regular fa-circle-check"></i>
+                            </div>
+                            <div class="text-[#5D7079]">
+                                <p>It'll only take you a few minutes and you get an instant decision.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex w-[98%] gap-3 mx-auto mt-[10px] lg:w-[95%] lg:mt-[10px] md:w-[100%] md:mt-[10px]">
+                            <div class="text-[#007bd8]">
+                                <i class="fa-regular fa-circle-check"></i>
+                            </div>
+                            <div class="text-[#5D7079]">
+                                <p>Your credit rating won't be affected.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex w-[98%] gap-3 mx-auto mt-[10px] lg:w-[95%] lg:mt-[10px] md:w-[100%] md:mt-[10px]">
+                            <div class="text-[#007bd8]">
+                                <i class="fa-regular fa-circle-check"></i>
+                            </div>
+                            <div class="text-[#5D7079]">
+                                <p>We'll even provide an indication of your credit limit.</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>  
+            </div>
+        </div>  
+        <div data-aos="zoom-out-right" class="w-[100%] mx-auto mt-[40px] lg:mt-[20px] lg:w-[33%] ">
+            <img src="image/three-cards.png" alt="" class="w-[95%] h-[390px] lg:w-[100%] md:w-[70%] md:h-[450px] lg:h-[300px] mx-auto">
+        </div>
+    </div>
+    <div class="lg:w-[95%] lg:flex items-center lg:mt-[200px]">
+        <div class="w-[100%] mx-auto mt-[90px] lg:mt-0 lg:w-[45%]">
+            <img src="image/stlb1.jpg" alt="" class="w-[95%] h-[350px] lg:w-[90%] md:w-[90%] lg:h-[520px] md:h-[700px] mx-auto rounded-[5px]">
+        </div>
+        <div class="lg:w-[45%]">
+            <div class="text-[green] font-semibold w-[95%] mt-[30px] md:w-[90%] lg:mt-0 mx-auto">
+                <h3>Wealthtrust Bank Cards</h3>
+            </div>
+            <div class="text-[#2a3f65] text-[20px] font-bold lg:text-[25px] w-[95%] md:w-[90%] mx-auto mt-[10px] md:text-[25px]">
+                <h3 class="w-[85%]">Let’s answer some of your questions or frequently asked questions</h3>
+            </div>
+            <div class="accordion max-w-2xl mx-auto p-4 md:max-w-2xl lg:max-w-4xl ">
+                <ol class="list-decimal pl-6 sm:pl-8">
+                  <li class="mb-2 border border-gray-300 rounded-md overflow-hidden">
+                    <input type="checkbox" id="item1" class="peer">
+                    <label for="item1" role="button" aria-controls="content1" aria-expanded="false" class="block p-3 sm:p-4 bg-gray-200 font-semibold cursor-pointer relative hover:bg-gray-300 transition-colors duration-200">
+                        What type of account is available?
+                    </label>
+                    <div class="max-h-0 peer-checked:max-h-96 overflow-hidden bg-white p-0 peer-checked:p-4 transition-all duration-300" id="content1">
+                        <ol type="1">
+                            <li>Savings Account.</li>
+                            <li>Current Account.</li>
+                            <li>Business / Corporate Account.</li>
+                            <li>And More..</li>
+                        </ol>
+                    </div>
+                  </li>
+                  <li class="mb-2 border border-gray-300 rounded-md overflow-hidden">
+                    <input type="checkbox" id="item2" class="peer">
+                    <label for="item2" role="button" aria-controls="content2" aria-expanded="false" class="block p-3 sm:p-4 bg-gray-200 font-semibold cursor-pointer relative hover:bg-gray-300 transition-colors duration-200">
+                        How do I make transfer?
+                    </label>
+                    <div class="max-h-0 peer-checked:max-h-96 overflow-hidden bg-white p-0 peer-checked:p-4 transition-all duration-300" id="content2">
+                        <span>To transfer funds to any account, login to your bank account and on your dashboard click Transfer Funds. There are various transfer processes, it will be stated on the transfer page, then you can choose the type of transfer you want to do.</span>
+                    </div>
+                  </li>
+                  <li class="mb-2 border border-gray-300 rounded-md overflow-hidden">
+                    <input type="checkbox" id="item3" class="peer">
+                    <label for="item3" role="button" aria-controls="content3" aria-expanded="false" class="block p-3 sm:p-4 bg-gray-200 font-semibold cursor-pointer relative hover:bg-gray-300 transition-colors duration-200">
+                        How do I change my personal information?
+                    </label>
+                    <div class="max-h-96 peer-checked:max-h-96 overflow-hidden bg-white p-0 peer-checked:p-4 transition-all duration-300" id="content3">
+                      <span>To change your personal information such as Address, Phone number or email, kindly contact our customer support team (support@wealthtrustfinancialinc.com).</span>
+                    </div>
+                  </li>
+                </ol>
+              </div>
+            <!-- <div class="container mx-auto p-2 sm:p-4 md:p-6 lg:p-8 mt-[50px]">
+                <div id="accordion-collapse" data-accordion="collapse">
+                  Accordion Item 1
+                  <h2 id="accordion-collapse-heading-1">
+                    <button type="button" class="flex justify-between items-center p-3 sm:p-4 md:p-5 lg:p-6 w-full font-medium text-left text-gray-500 border border-b-0 border-gray-200 rounded-t-xl bg-gray-50 hover:bg-gray-900 text-sm sm:text-base md:text-lg" data-accordion-target="#accordion-collapse-body-1" aria-expanded="true" aria-controls="accordion-collapse-body-1">
+                      <span>What type of account is available?</span>
+                      <svg data-accordion-icon class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 rotate-180 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                      </svg>
+                    </button>
+                  </h2>
+                  <div id="accordion-collapse-body-1" class="hidden" aria-labelledby="accordion-collapse-heading-1">
+                    <div class="p-3 sm:p-4 md:p-5 lg:p-6 border border-b-0 border-gray-200 text-sm sm:text-base md:text-lg text-gray-500">
+                        <div class="flex flex-col gap-1">
+                            <div class="flex w-[90%] mx-auto text-[black]">
+                                <li></li>
+                                <h4 class="">Savings Account.</h4>
+                            </div>
+                            <div class="flex w-[90%] mx-auto text-[black]">
+                                <li></li>
+                                <h4 class="">Current Account.</h4>
+                            </div>
+                            <div class="flex w-[90%] mx-auto text-[black]">
+                                <li></li>
+                                <h4 class="">Business / Corporate Account.</h4>
+                            </div>
+                            <div class="flex w-[90%] mx-auto text-[black]">
+                                <li></li>
+                                <h4 class="">And More..</h4>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                  Accordion Item 2
+                  <h2 id="accordion-collapse-heading-2">
+                    <button type="button" class="flex justify-between items-center p-3 sm:p-4 md:p-5 lg:p-6 w-full font-medium text-left text-gray-500 border border-gray-200 bg-gray-50 hover:bg-gray-900 text-sm sm:text-base md:text-lg" data-accordion-target="#accordion-collapse-body-2" aria-expanded="false" aria-controls="accordion-collapse-body-2">
+                      <span>How do I make transfer?</span>
+                      <svg data-accordion-icon class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                      </svg>
+                    </button>
+                  </h2>
+                  <div id="accordion-collapse-body-2" class="hidden" aria-labelledby="accordion-collapse-body-2">
+                    <div class="p-3 sm:p-4 md:p-5 lg:p-6 border border-gray-200 text-sm sm:text-base md:text-lg text-gray-500">
+                      <span>To transfer funds to any account, login to your bank account and on your dashboard click Transfer Funds. There are various transfer processes, it will be stated on the transfer page, then you can choose the type of transfer you want to do.</span>
+                    </div>
+                  </div>
+                  Accordion Item 3
+                   <h2 id="accordion-collapse-heading-3">
+                    <button type="button" class="flex justify-between items-center p-3 sm:p-4 md:p-5 lg:p-6 w-full font-medium text-left text-gray-500 border border-gray-200 bg-gray-50 hover:bg-gray-900 text-sm sm:text-base md:text-lg" data-accordion-target="#accordion-collapse-body-3" aria-expanded="false" aria-controls="accordion-collapse-body-3">
+                      <span>How do I change my personal information?</span>
+                      <svg data-accordion-icon class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                      </svg>
+                    </button>
+                  </h2>
+                  <div id="accordion-collapse-body-3" class="hidden" aria-labelledby="accordion-collapse-body-3">
+                    <div class="p-3 sm:p-4 md:p-5 lg:p-6 border border-gray-200 text-sm sm:text-base md:text-lg text-gray-500">
+                      <span>To change your personal information such as Address, Phone number or email, kindly contact our customer support team (support@wealthtrustfinancialinc.com).</span>
+                    </div>
+                  </div>
+                </div>
+            </div> -->
+            
+        </div>
+    </div>
+    <div class="lg:flex items-center lg:w-[95%] lg:pb-[90px] md:pb-[50px]">
+        <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" class="w-[100%] mx-auto mt-[100px] lg:w-[45%] ">
+            <img src="image/security-1.png" alt="" class="w-[95%] h-[370px] lg:h-[520px] md:w-[80%] md:h-[600px] lg:w-[90%] mx-auto">
+        </div>
+        <div class="lg:w-[45%]">
+            <div class="flex flex-col gap-2 mt-[30px]">
+                <div class="text-[green] font-semibold w-[95%] md:w-[90%] lg:w-[] mx-auto">
+                    <h3>Reliable Online Payment Platform</h3>
+                </div>
+                <div class="text-[#2a3f65] text-[20px] font-bold lg:text-[25px] w-[95%] lg:w-[] md:w-[90%] mx-auto md:text-[25px]">
+                    <h3 class="w-[90%]">Financial power at your fingertips</h3>
+                </div>
+                <div class="text-[#5D7079] w-[95%] md:w-[90%] mx-auto">
+                    <p>Transfer and deposite money anytime, anywhere in the world. With our secure online and mobile banking, you can:</p>
+                </div>
+            </div>
+            <div class="md:flex items-center md:w-[92%] mx-auto">
+                <div class="md:w-[45%]">
+                    <div class="flex w-[95%] mx-auto gap-3 mt-[30px]">
+                        <div class="text-[red]">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <div class="text-[#5D7079]">
+                            <h3>Verify your account balances, direct deposits, and payments—including pending transactions.</h3>
+                        </div>
+                    </div>
+                    <div class="flex w-[95%] mx-auto gap-3 mt-[10px]">
+                        <div class="text-[red]">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <div class="text-[#5D7079]">
+                            <h3>Pay your loan, credit card, or mortgage bill.</h3>
+                        </div>
+                    </div>
+                    <div class="flex w-[95%] mx-auto gap-3 mt-[10px]">
+                        <div class="text-[red]">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <div class="text-[#5D7079]">
+                            <h3>Deposit checks by snapping a picture with your phone.</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-[45%] md:pt-[23px]">
+                    <div class="flex w-[95%] mx-auto gap-3 mt-[10px]">
+                        <div class="text-[red]">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <div class="text-[#5D7079]">
+                            <h3>Transfer funds between your accounts or to another Wealth Trust Bank member, or pay virtually anyone.</h3>
+                        </div>
+                    </div>
+                    <div class="flex w-[95%] mx-auto gap-3 mt-[10px] pb-[60px] ">
+                        <div class="text-[red]">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <div class="text-[#5D7079]">
+                            <h3>Place stop payment orders on checks, and more.</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-[#007bd8] w-[100%] mt-[80px] h-[300px]">
+        <div class="font-semibold text-center text-white pt-[40px]">
+            <span>Smarter Banking</span>
+        </div>
+        <div class="font-bold text-center text-white text-[20px] mt-[10px] md:text-[25px] lg:text-[30px]">
+            <h3 class="lg:w-[70%] md:w-[85%] mx-auto">Banking at the speed of business, Spend less time banking and more time growing your business.</h3>
+        </div>
+        <div class="flex justify-center mt-[40px] gap-3">
+            <div class="bg-[#0fc9bb] rounded-[5px] hover:bg-[#0f9c69] w-[150px] h-[40px] text-white font-semibold text-center p-[5px]">
+                <a href="business.html">Business Account</a>
+            </div>
+            <div class="bg-[#0f9c69] rounded-[5px] hover:bg-[#0fc9bb] w-[180px] h-[40px] text-white font-semibold text-center p-[5px]">
+                <a href="commercial.html">Commercial Account</a>
+            </div>
+        </div>
+    </div>
+    <!-- footer begin -->
+    <footer>
+        <div class="lg:flex flex-row items-center lg:w-[80%] mx-auto">
+            <div class="md:flex items-center gap-15 md:w-[80%] mx-auto lg:w-[70%]">
+                <div class="lg:flex flex-col lg:w-[45%] md:flex flex-col md:w-[45%]">
+                    <div class="w-[100%] mt-[40px] lg:mt-0 md:mt-0">
+                        <img src="image/bank-logo.png" alt="" class="w-[90%] lg:w-[90%] h-[170px] md:w-[95%] mx-auto">
+                    </div>
+                    <div class="text-[#5D7079] w-[95%] mx-auto mt-[20px] lg:mt-0 md:mt-0 lg:w-[100%] md:w-[95%] sans-serif">
+                        <p>Find an account that works for you, whether you're an individual, start-up, sole trader or SME.</p>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-3 lg:w-[20%] md:w-[45%]">
+                    <div class="text-[#2A3F65] font-bold text-[20px] w-[95%] mt-[30px] mx-auto">
+                        <h2>Personal</h2>
+                    </div>
+                    <div class="w-[95%] mx-auto">
+                        <p class="bg-[#007bd8] w-[15%] lg:w-[50%] lg:h-[2px] h-[2px]"></p>
+                    </div>
+                    <div>
+                        <ul class="text-[#5D7079] flex flex-col gap-3 w-[95%] mx-auto">
+                            <li class="hover:text-[blue]"><a href="bankaccount.html">Bank Accounts</a></li>
+                            <li class="hover:text-[blue]"><a href="">Credit cards</a></li>
+                            <li class="hover:text-[blue]"><a href="mortgages.html">Mortgages</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="md:flex items-center gap-20 md:w-[80%] mx-auto lg:w-[60%]">
+                <div class="flex flex-col gap-3 lg:w-[20%] md:w-[45%]">
+                    <div class="text-[#2A3F65] font-bold text-[20px] w-[95%] mt-[30px] mx-auto">
+                        <h2>Resources</h2>
+                    </div>
+                    <div class="w-[95%] mx-auto">
+                        <p class="bg-[#007bd8] w-[15%] lg:w-[50%] lg:h-[2px] h-[2px]"></p>
+                    </div>
+                    <div>
+                        <ul class="text-[#5D7079] flex flex-col gap-3 w-[95%] mx-auto">
+                            <li class="hover:text-[blue]"><a href="investment.html">Investment</a></li>
+                            <li class="hover:text-[blue]"><a href="loan.html">Loan</a></li>
+                            <li class="hover:text-[blue]"><a href="insurance.html">Insurance</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-3 lg:w-[20%] md:w-[45%]">
+                    <div class="text-[#2A3F65] font-bold text-[20px] w-[95%] mt-[30px] mx-auto">
+                        <h2>About Us</h2>
+                    </div>
+                    <div class="w-[95%] mx-auto">
+                        <p class="bg-[#007bd8] w-[15%] lg:w-[50%] lg:h-[2px] h-[2px]"></p>
+                    </div>
+                    <div>
+                        <ul class="text-[#5D7079] flex flex-col gap-3 w-[95%] mx-auto">
+                            <li class="hover:text-[blue]"><a href="about.html">About</a></li>
+                            <li class="hover:text-[blue]"><a href="contactus.html">Contact</a></li>
+                            <li class="hover:text-[blue]"><a href="faqs.html">FAQ</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-[#5D7079] w-[95%] mx-auto mt-[30px] lg:w-[80%] md:w-[80%] font:sans-serif">
+            <p class="">At WealthTrust FinancialInc, we're here to help you achieve your financial goals. From everyday transactions to larger foreign exchange transfers - we can help you with a range of accounts and services. Find out how you can use your account to stay on top of your money.</p>
+        </div>
+        <div class="mt-[25px] lg:mt-[80px] flex justify-center items-center">
+            <p class="bg-gray-300 h-[1px] lg:w-[80%] w-[90%]"></p>
+        </div>
+        <div class="flex justify-center items-center mt-[30px]">
+            <svg class="w-4 h-4 text-yellow-300 me-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+            </svg>
+            <svg class="w-4 h-4 text-yellow-300 me-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+            </svg>
+            <svg class="w-4 h-4 text-yellow-300 me-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+            </svg>
+            <svg class="w-4 h-4 text-yellow-300 me-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+            </svg>
+            <svg class="w-4 h-4 text-gray-300 me-1 dark:text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+            </svg>
+            <p class="ms-1 text-sm font-medium text-gray-500 dark:text-gray-400">4.95</p>
+            <p class="ms-1 text-sm font-medium text-gray-500 dark:text-gray-400">out of</p>
+            <p class="ms-1 text-sm font-medium text-gray-500 dark:text-gray-400">5</p>
+        </div>
+        <div class="flex justify-center mt-[30px] gap-2">
+            <p class="text-[gray]"> > |</p>
+            <a href="terms.html" class="text-[#007bd8] font-semibold">Terms</a>
+        </div>
+        <div class="text-center mt-[20px] pb-[30px]">
+            <p class="text-[#5D7079]">Copyright @ 2025 WealthTrust FinancialInc. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <!-- footer end -->  
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+    <script src="../src/js/script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

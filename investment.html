@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- navbar begin -->
+    <nav class="fixed top-0 right-0 left-0 bg-[white] w-[100%]">
+        <div class="flex justify-between items-center">
+            <div class="lg:ml-[20px] md:ml-[30px]">
+                <img src="image/bank-logo.png" alt="" class="w-[150px] h-[100px]">
+            </div>
+            <div class="">
+                <div class="hidden lg:flex gap-[30px] text-[#5D7079] lg:ml-[120px]">
+                    <div class="group">
+                        <a href="#" class="text-[blue] relative group">Personal</a>
+                        <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-md min-w-[250px]">
+                            <a href="bankaccount.html" class="block px-4 py-2 text-gray-800 hover:text-[blue] hover:bg-gray-200">Bank Account</a>
+                            <a href="" class="block px-4 py-2 text-gray-800 hover:text-[blue] hover:bg-gray-200">Credit Cards</a>
+                            <a href="mortgages.html" class="block px-4 py-2 text-gray-800 hover:text-[blue] hover:bg-gray-200">Mortgages</a>
+                        </div>
+                    </div>
+                    <a href="business.html" class="hover:text-[blue]">Business</a>
+                    <a href="commercial.html" class="hover:text-[blue]">Commercial</a>
+                    <a href="investment.html" class="hover:text-[blue]">Investments</a>
+                    <a href="loan.html" class="hover:text-[blue]">Loans</a>
+                    <a href="insurance.html" class="hover:text-[blue]">Insurance</a>
+                    <div class="group">
+                        <a href="#" class="text-[blue]">About Us</a>
+                        <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-md min-w-[250px]">
+                            <a href="about.html" class="block px-4 py-2 text-gray-800 hover:text-[blue] hover:bg-gray-200">About Us</a>
+                            <a href="contactus.html" class="block px-4 py-2 text-gray-800 hover:text-[blue] hover:bg-gray-200">Contact Us</a>
+                            <a href="faqs.html" class="block px-4 py-2 text-gray-800 hover:text-[blue] hover:bg-gray-200">FAQ</a>
+                            <a href="privacy.html" class="block px-4 py-2 text-gray-800 hover:text-[blue] hover:bg-gray-200">Privacy Policy</a>
+                            <a href="terms.html" class="block px-4 py-2 text-gray-800 hover:text-[blue] hover:bg-gray-200">Terms</a>
+                        </div>
+                    </div>
+                    <a href="wealth.html" class="hover:text-[blue]">Wealth</a>
+                </div>
+            </div>
+            <div class="mr-[10px] md:mr-[30px]">
+                <div class="text-[30px] w-[60px] border border-[blue] text-center lg:hidden" id="develop">
+                    <button class="fa-solid fa-bars" onclick="greeCee()"></button>
+                </div>
+                <div class="text-[30px] w-[60px] border border-[blue] text-center hidden lg:hidden" id="deploy">
+                    <button class="fa-solid fa-x" onclick="secTion()"></button>
+                </div>
+            </div>
+            <div class="hidden lg:flex gap-5 mr-[30px]">
+                <div class="border border-[green] hover:text-[white] text-[green] p-[10px] rounded-[8px] hover:bg-blue-500">
+                    <a href="">Login</a>
+                </div>
+                <div class="border border-[green] text-[white] bg-[green] p-[10px] rounded-[8px] hover:bg-blue-500">
+                    <a href="">Register</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- mobile nav -->
+        <div class="overflow-scroll transform transition-transform translate-y duration-300 w-[90%] md:w-[85%] mx-auto">
+            <div class="hidden lg:hidden flex flex-col justify-center gap-3 text-center bg-[white] w-[100%] mx-auto h-[355px] font-bold text-[gray]" id="demolish">
+                <div class="flex justify-center items-center text-center  font-bold transition-all ease-out duration-300 border- border-b-1 w-[100%] pb-[8px] pt-[8px] relative">
+                    <div class="lg:hidden hover:text-[blue] flex items-center gap-2">
+                        <span id="plusIcon" class="text-lg cursor-pointer" onclick="onPoint()">+</span>
+                        <span id="minusIcon" class="text-lg cursor-pointer hidden" onclick="outPoint()">-</span>
+                        <span>Personal</span>
+                    </div>
+                    <div class="bg-white rounded-2xl rounded-tl-none rounded-tr-none hidden lg:hidden transition-transform space-y-3 p-2 justify-start text-left w-[100%] absolute top-[100%] left-0" id="dropdownMenu">
+                        <div class="border-b-1">
+                            <a href="bankaccount.html" class="hover:text-[blue] font-bold transition-all ease-out duration-300 w-[100%] pb-[8px] flex justify-center text-center">Bank Account</a>
+                        </div>
+                        <div class="border-b-1">
+                            <a href="" class="hover:text-[blue] font-bold transition-all ease-out duration-300 w-[100%] pb-[8px] flex justify-center text-center">Credit Cards</a>
+                        </div>
+                        <div class="border-b-1">
+                            <a href="mortgages.html" class="hover:text-[blue] font-bold transition-all ease-out duration-300 w-[100%] pb-[8px] flex justify-center text-center">Mortgages</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="business.html" class="hover:text-[blue] font-bold transition-all ease-out duration-300 border-b-1 w-[100%] pb-[8px]">Business</a>
+                <a href="commercial.html" class="hover:text-[blue] font-bold transition-all ease-out duration-300 border-b-1 w-[100%] pb-[8px]">Commercial</a>
+                <a href="investment.html" class="hover:text-[blue] font-bold transition-all ease-out duration-300 border-b-1 w-[100%] pb-[8px]">Investments</a>
+                <a href="loan.html" class="hover:text-[blue] font-bold transition-all ease-out duration-300 border-b-1 w-[100%] pb-[8px]">Loans</a>
+                <a href="insurance.html" class="hover:text-[blue] font-bold transition-all ease-out duration-300 border-b-1 w-[100%] pb-[8px]">Insurance</a>
+                <a href="about.html" class="hover:text-[blue] font-bold transition-all ease-out duration-300 border-b-1 w-[100%] pb-[8px]">About Us</a>
+                <a href="wealth.html" class="hover:text-[blue] font-bold transition-all ease-out duration-300 border-b-1 w-[100%] pb-[8px]">Wealth</a>
+            </div>
+        </div>
+    </nav>
+    <!-- navbar end -->
+    <!-- hero session begin -->
+    <div class="bg-[url('./image/invest1.jpg')] w-[100%] h-[60vh] mt-[100px] lg:mt-[100px] md:h-[40vh] lg:h-[70vh] bg-center bg-cover bg-no-repeat">
+        <div class="flex flex-col gap-3 pt-[90px] md:pt-[150px]">
+            <div class="w-[90%] mx-auto font-bold text-[25px] lg:text-[40px] lg:w-[70%] md:text-[30px]">
+                <h2><strong class="text-[white]">Investments</strong></h2>
+            </div>
+            <div class="text-[#fff] w-[90%] mx-auto font-semibold lg:text-[20px] lg:w-[70%] md:text-[20px]">
+                <p class="lg:w-[45%] md:w-[60%]">Investing could help grow your savings so that you can do more of what you enjoy in life.</p>
+            </div>
+            <div class="w-[90%] mx-auto mt-[30px] lg:w-[70%]">
+                <a href="" class="w-[135px] p-[10px] lg:p-[15px] h-[50px] text-[#fff] hover:bg-[#0f9c69] bg-[#007bd8] rounded-[5px]">Online Bank</a>
+            </div>
+        </div>
+    </div>
+    <!-- hero session end -->
+    <div class="lg:flex items-center lg:w-[90%] mx-auto mt-[50px] lg:mt-[100px] md:mt-[70px]">
+        <div class="lg:flex flex-col lg:w-[50%]">
+            <div class="text-[#0f9c69] font-semibold w-[95%] mx-auto md:w-[85%] md:text-[20px]">
+                <span>Investment Banking</span>
+            </div>
+            <div class="text-[#2a3f65] font-bold text-[20px] lg:text-[30px] mt-[10px] w-[95%] md:text-[25px] mx-auto md:w-[85%]">
+                <h2>Plan your future with confidence</h2>
+            </div>
+            <div class="w-[95%] mx-auto text-[#5D7079] mt-[10px] md:w-[85%] md:text-[18px]">
+                <p>As part of your plan, your Personal Wealth Advisor will help you consider 5 key areas of your financial future:</p>
+            </div>
+            <div class="container mx-auto p-2 sm:p-4 md:p-6 lg:p-8 mt-[30px] lg:mt-0">
+                <div id="accordion-collapse" data-accordion="collapse">
+                  <!-- Accordion Item 1 -->
+                  <h2 id="accordion-collapse-heading-1">
+                    <button type="button" class="flex justify-between items-center p-3 sm:p-4 md:p-5 lg:p-6 w-full font-medium text-left text-gray-500 border border-b-0 border-gray-200 rounded-t-xl bg-gray-50 hover:bg-gray-900 text-sm sm:text-base md:text-lg" data-accordion-target="#accordion-collapse-body-1" aria-expanded="true" aria-controls="accordion-collapse-body-1">
+                      <span>1. Your long term investment goal</span>
+                      <svg data-accordion-icon class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 rotate-180 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                      </svg>
+                    </button>
+                  </h2>
+                  <div id="accordion-collapse-body-1" class="hidden" aria-labelledby="accordion-collapse-heading-1">
+                    <div class="p-3 sm:p-4 md:p-5 lg:p-6 border border-b-0 border-gray-200 text-sm sm:text-base md:text-lg text-gray-500">
+                        <span>Your Personal Wealth Advisor can help you find the most efficient way to invest your wealth with a tailored plan. They’ll present the options you have available to grow your wealth and achieve your goals, based on the level of risk you’re willing to take.</span>
+                    </div>
+                  </div>
+                  <!-- Accordion Item 2 -->
+                  <h2 id="accordion-collapse-heading-2">
+                    <button type="button" class="flex justify-between items-center p-3 sm:p-4 md:p-5 lg:p-6 w-full font-medium text-left text-gray-500 border border-gray-200 bg-gray-50 hover:bg-gray-900 text-sm sm:text-base md:text-lg" data-accordion-target="#accordion-collapse-body-2" aria-expanded="false" aria-controls="accordion-collapse-body-2">
+                      <span>2. Protecting yourself and your family</span>
+                      <svg data-accordion-icon class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                      </svg>
+                    </button>
+                  </h2>
+                  <div id="accordion-collapse-body-2" class="hidden" aria-labelledby="accordion-collapse-body-2">
+                    <div class="p-3 sm:p-4 md:p-5 lg:p-6 border border-gray-200 text-sm sm:text-base md:text-lg text-gray-500">
+                      <span>Life can bring unexpected challenges, such as an illness, injury or loss of income. So your plan will also consider your life and income protection needs to bring you peace of mind.</span>
+                    </div>
+                  </div>
+                  <!-- Accordion Item 3 -->
+                   <h2 id="accordion-collapse-heading-3">
+                    <button type="button" class="flex justify-between items-center p-3 sm:p-4 md:p-5 lg:p-6 w-full font-medium text-left text-gray-500 border border-gray-200 bg-gray-50 hover:bg-gray-900 text-sm sm:text-base md:text-lg" data-accordion-target="#accordion-collapse-body-3" aria-expanded="false" aria-controls="accordion-collapse-body-3">
+                      <span>3. Planning for retirement</span>
+                      <svg data-accordion-icon class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                      </svg>
+                    </button>
+                  </h2>
+                  <div id="accordion-collapse-body-3" class="hidden" aria-labelledby="accordion-collapse-body-3">
+                    <div class="p-3 sm:p-4 md:p-5 lg:p-6 border border-gray-200 text-sm sm:text-base md:text-lg text-gray-500">
+                      <span>You may have a single pension, multiple pensions or no pension at all. Either way, your financial plan can show you the path to the retirement you’ve always hoped for.</span>
+                    </div>
+                  </div>
+                  <!-- Accordion Item 4 -->
+                  <h2 id="accordion-collapse-heading-4">
+                    <button type="button" class="flex justify-between items-center p-3 sm:p-4 md:p-5 lg:p-6 w-full font-medium text-left text-gray-500 border border-gray-200 bg-gray-50 hover:bg-gray-900 text-sm sm:text-base md:text-lg" data-accordion-target="#accordion-collapse-body-4" aria-expanded="false" aria-controls="accordion-collapse-body-4">
+                      <span>4. Managing your retirement income</span>
+                      <svg data-accordion-icon class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                      </svg>
+                    </button>
+                  </h2>
+                  <div id="accordion-collapse-body-4" class="hidden" aria-labelledby="accordion-collapse-body-4">
+                    <div class="p-3 sm:p-4 md:p-5 lg:p-6 border border-gray-200 text-sm sm:text-base md:text-lg text-gray-500">
+                      <span>There’s lots of decisions to be made about how best to access your pension. Your plan will help you understand all the options available so you can manage the income from your pension with confidence.</span>
+                    </div>
+                  </div>
+                  <!-- Accordion Item 5 -->
+                  <h2 id="accordion-collapse-heading-5">
+                    <button type="button" class="flex justify-between items-center p-3 sm:p-4 md:p-5 lg:p-6 w-full font-medium text-left text-gray-500 border border-gray-200 bg-gray-50 hover:bg-gray-900 text-sm sm:text-base md:text-lg" data-accordion-target="#accordion-collapse-body-5" aria-expanded="false" aria-controls="accordion-collapse-body-5">
+                      <span>5. Passing on your wealth</span>
+                      <svg data-accordion-icon class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                      </svg>
+                    </button>
+                  </h2>
+                  <div id="accordion-collapse-body-5" class="hidden" aria-labelledby="accordion-collapse-body-5">
+                    <div class="p-3 sm:p-4 md:p-5 lg:p-6 border border-gray-200 text-sm sm:text-base md:text-lg text-gray-500">
+                      <span>When it comes to passing on your wealth to the next generation, you’ll want to do it in the most tax efficient way. Your plan can cover how best to pass on your wealth to those you care for the most.</span>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div class="w-[95%] mx-auto mt-[40px] lg:w-[45%] lg:mt-0">
+            <img src="image/in2-invest.jpg" alt="" class="w-[100%] lg:w-[100%] lg:h-[400px] md:w-[90%] md:h-[400px] h-[250px] mx-auto">
+        </div>
+    </div>
+    <div class="lg:flex items-center lg:w-[90%] lg:mt-[200px] mx-auto">
+        <div class="w-[95%] mx-auto mt-[100px] lg:mt-0 lg:w-[50%]">
+            <img src="image/in1-invest.jpg" alt="" class="w-[100%] lg:w-[100%] md:w-[90%] lg:h-[400px] mx-auto">
+        </div>
+        <div class="lg:flex flex-col lg:w-[50%]">
+            <div class="text-[#2a3f65] font-bold text-[20px] lg:text-[25px] mt-[20px] w-[95%] md:text-[25px] mx-auto md:w-[85%]">
+                <h2>Give investing a go yourself</h2>
+            </div>
+            <div class="w-[95%] mx-auto text-[#5D7079] mt-[10px] md:w-[85%] md:text-[18px]">
+                <p>The Investment Hub is designed to give you choice, control and flexibility over your money.</p>
+            </div>
+            <div class="flex gap-3 w-[95%] mx-auto bg-[#f7fbfc] p-[15px] lg:w-[90%] md:w-[85%] rounded-[30px] mt-[20px]">
+                <div class="text-[blue]">
+                    <i class="fa-regular fa-circle-check"></i>
+                </div>
+                <div class="text-[#5D7079]">
+                    <p>Choice on whether you would like online advice on your funds</p>
+                </div>
+            </div>
+            <div class="flex gap-3 w-[95%] mx-auto bg-[#f7fbfc] p-[15px] lg:w-[90%] md:w-[85%] rounded-[30px] mt-[20px]">
+                <div class="text-[blue]">
+                    <i class="fa-regular fa-circle-check"></i>
+                </div>
+                <div class="text-[#5D7079]">
+                    <p>Control to add, switch, or withdraw your money anytime</p>
+                </div>
+            </div>
+            <div class="flex gap-3 w-[95%] mx-auto bg-[#f7fbfc] p-[15px] lg:w-[90%] md:w-[85%] rounded-[30px] mt-[20px]">
+                <div class="text-[blue]">
+                    <i class="fa-regular fa-circle-check"></i>
+                </div>
+                <div class="text-[#5D7079]">
+                    <p>Flexibility of being able to invest in 950 available funds</p>
+                </div>
+            </div>
+            <div class="flex gap-3 w-[95%] mx-auto bg-[#f7fbfc] p-[15px] lg:w-[90%] md:w-[85%] rounded-[30px] mt-[20px]">
+                <div class="text-[blue]">
+                    <i class="fa-regular fa-circle-check"></i>
+                </div>
+                <div class="text-[#5D7079]">
+                    <p>Try the Investment Hub for yourself, with no commitment to add any money or invest until you’re ready.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="text-[#0f9c69] font-semibold md:text-[20px] text-center mt-[120px]">
+        <span>Take your next step</span>
+    </div>
+    <div class="text-[#2a3f65] font-bold text-[20px] text-center lg:text-[25px] mt-[20px] md:text-[25px]">
+        <h2 class="lg:w-[60%] lg:mx-auto md:w-[80%] md:mx-auto">Step into investing with us</h2>
+    </div>
+    <div class="text-[#2a3f65] text-center font-bold mt-[10px] lg:text-[25px] md:text-[25px]">
+        <h4 class="md:w-[70%] md:mx-auto">Learn how you could make your money work harder for you and your family.</h4>
+    </div>
+    <div class="lg:flex lg:flex-row lg:justify-content lg:items-center lg:w-[95%] mx-auto">
+        <div class="lg:flex lg:w-[95%] mx-auto md:flex justify-center md:gap-[20px] md:w-[85%]  md:grid md:grid-cols-2">
+            <div class="mt-[30px] lg:w-[50%] md:w-[100%] w-[95%] mx-auto">
+                <div class="w-[100%] mx-auto">
+                    <img src="image/in3-invest.jpg" alt="" class="w-[100%] h-[250px] lg:w-[100%] md:w-[100%] md:h-[300px] lg:h-[250px]">
+                </div>
+                <div class="border border-gray-300 h-[140px] w-[100%] lg:h-[170px] p-[20px] md:h-[175px]">
+                    <div class="flex flex-col gap-3">
+                        <div class="text-[#2A3F65] font-bold text-[20px]">
+                            <h2>Invest Wisely</h2>
+                        </div>
+                        <div class="text-[#5D7079] lg:w-[100%] font-sans-serif text-[15px]">
+                            <p>Aged 18-25? Invest in your future, with a free investment account and free regular investing.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-[30px] lg:w-[50%] md:w-[100%] w-[95%] mx-auto">
+                <div class="w-[100%] mx-auto ">
+                    <img src="image/in4-invest.jpg" alt="" class="w-[100%] h-[250px] md:w-[100%] md:h-[300px] lg:h-[250px]">
+                </div>
+                <div class="border border-gray-300 h-[175px] w-[100%] lg:h-[170px] p-[20px] md:w-[100%] lg:w-[100%]">
+                    <div class="flex flex-col gap-3">
+                        <div class="text-[#2A3F65] font-bold text-[20px]">
+                            <h2>Free regular investing</h2>
+                        </div>
+                        <div class="text-[#5D7079] lg:w-[100%] font-sans-serif text-[15px]">
+                            <p>Regular investments could be another way for you to grow your money, without needing a lump sum. Start your plan today and pay no commission on regular investments.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-[30px] lg:w-[50%] md:w-[60%] col-span-2 mx-auto w-[95%]">
+                <div class="lg:w-[100%] lg:mx-auto ">
+                    <img src="image/in5-invest.jpg" alt="" class="w-[100%] h-[250px] lg:w-[100%] md:w-[100%] md:h-[300px] lg:h-[250px]">
+                </div>
+                <div class="border border-gray-300 h-[160px] w-[100%] lg:h-[170px] p-[20px] md:w-[%] lg:w-[100%] mx-auto">
+                    <div class="flex flex-col gap-3">
+                        <div class="text-[#2A3F65] font-bold text-[20px]">
+                            <h2>Ready-Made Pension</h2>
+                        </div>
+                        <div class="text-[#5D7079] lg:w-[100%] font-sans-serif text-[15px]">
+                            <p>A simple and smart way to help you save for your retirement. Our funds are ready-made by experts, meaning the hard work is done for you.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="lg:flex items-center gap-3 lg:mt-[100px] lg:w-[90%] mx-auto justify-between">
+        <div class="w-[95%] mx-auto lg:m-0 mt-[120px] lg:w-[50%]">
+            <img src="image/in6-invest.jpg" alt="" class="w-[100%] h-[250px] lg:h-[400px] md:w-[90%] md:h-[500px] lg:w-[100%] md:mx-auto">
+        </div>
+        <div class="flex flex-col lg:w-[50%]">
+            <div>
+                <div class="text-[#2a3f65] font-bold text-[20px] lg:text-[25px] lg:w-[90%] mt-[20px] w-[95%] md:text-[25px] mx-auto md:w-[85%]">
+                    <h2>Investment goals</h2>
+                </div>
+                <div class="w-[95%] mx-auto text-[#5D7079] mt-[10px] md:w-[85%] lg:w-[90%] md:text-[18px]">
+                    <p>Discover a smart way to invest and track your long-term goals in the app. Investing carries risk – so you could get back less than you invest.</p>
+                </div>
+            </div>
+            <div>
+                <div class="text-[#2a3f65] font-bold text-[20px] lg:text-[25px] lg:w-[90%] mt-[20px] w-[95%] md:text-[25px] mx-auto md:w-[85%]">
+                    <h2>Investment calculator</h2>
+                </div>
+                <div class="w-[95%] mx-auto text-[#5D7079] mt-[10px] md:w-[85%] lg:w-[90%] md:text-[18px]">
+                    <p>Use our calculator to see how your investment could potentially grow over time and under different market conditions.</p>
+                </div>
+            </div>
+            <div>
+                <div class="text-[#2a3f65] font-bold text-[20px] lg:text-[25px] lg:w-[90%] mt-[20px] w-[95%] md:text-[25px] mx-auto md:w-[85%]">
+                    <h2>New to investing?</h2>
+                </div>
+                <div class="w-[95%] mx-auto text-[#5D7079] mt-[10px] md:w-[85%] lg:w-[90%] md:text-[18px]">
+                    <p>We're here to help you start investing. Remember, investing has its downs as well as ups – and you could get back less than you invest.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-[#007bd8] w-[100%] mt-[80px] lg:mt-[130px] h-[300px]">
+        <div class="font-semibold text-center text-white pt-[40px]">
+            <span>Smarter Banking</span>
+        </div>
+        <div class="font-bold text-center text-white text-[20px] mt-[10px] md:text-[25px] lg:text-[30px]">
+            <h3 class="lg:w-[70%] md:w-[85%] mx-auto">Banking at the speed of business, Spend less time banking and more time growing your business.</h3>
+        </div>
+        <div class="flex justify-center mt-[40px] gap-3">
+            <div class="bg-[#0fc9bb] rounded-[5px] hover:bg-[#0f9c69] w-[150px] h-[40px] text-white font-semibold text-center p-[5px]">
+                <a href="business.html">Business Account</a>
+            </div>
+            <div class="bg-[#0f9c69] rounded-[5px] hover:bg-[#0fc9bb] w-[180px] h-[40px] text-white font-semibold text-center p-[5px]">
+                <a href="commercial.html">Commercial Account</a>
+            </div>
+        </div>
+    </div>
+    <!-- footer begin -->
+    <footer>
+        <div class="lg:flex flex-row items-center lg:w-[80%] mx-auto">
+            <div class="md:flex items-center gap-15 md:w-[80%] mx-auto lg:w-[70%]">
+                <div class="lg:flex flex-col lg:w-[45%] md:flex flex-col md:w-[45%]">
+                    <div class="w-[100%] mt-[40px] lg:mt-0 md:mt-0">
+                        <img src="image/bank-logo.png" alt="" class="w-[90%] lg:w-[90%] h-[170px] md:w-[95%] mx-auto">
+                    </div>
+                    <div class="text-[#5D7079] w-[95%] mx-auto mt-[20px] lg:mt-0 md:mt-0 lg:w-[100%] md:w-[95%] sans-serif">
+                        <p>Find an account that works for you, whether you're an individual, start-up, sole trader or SME.</p>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-3 lg:w-[20%] md:w-[45%]">
+                    <div class="text-[#2A3F65] font-bold text-[20px] w-[95%] mt-[30px] mx-auto">
+                        <h2>Personal</h2>
+                    </div>
+                    <div class="w-[95%] mx-auto">
+                        <p class="bg-[#007bd8] w-[15%] lg:w-[50%] lg:h-[2px] h-[2px]"></p>
+                    </div>
+                    <div>
+                        <ul class="text-[#5D7079] flex flex-col gap-3 w-[95%] mx-auto">
+                            <li class="hover:text-[blue]"><a href="bankaccount.html">Bank Accounts</a></li>
+                            <li class="hover:text-[blue]"><a href="">Credit cards</a></li>
+                            <li class="hover:text-[blue]"><a href="mortgages.html">Mortgages</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="md:flex items-center gap-20 md:w-[80%] mx-auto lg:w-[60%]">
+                <div class="flex flex-col gap-3 lg:w-[20%] md:w-[45%]">
+                    <div class="text-[#2A3F65] font-bold text-[20px] w-[95%] mt-[30px] mx-auto">
+                        <h2>Resources</h2>
+                    </div>
+                    <div class="w-[95%] mx-auto">
+                        <p class="bg-[#007bd8] w-[15%] lg:w-[50%] lg:h-[2px] h-[2px]"></p>
+                    </div>
+                    <div>
+                        <ul class="text-[#5D7079] flex flex-col gap-3 w-[95%] mx-auto">
+                            <li class="hover:text-[blue]"><a href="investment.html">Investment</a></li>
+                            <li class="hover:text-[blue]"><a href="loan.html">Loan</a></li>
+                            <li class="hover:text-[blue]"><a href="insurance.html">Insurance</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-3 lg:w-[20%] md:w-[45%]">
+                    <div class="text-[#2A3F65] font-bold text-[20px] w-[95%] mt-[30px] mx-auto">
+                        <h2>About Us</h2>
+                    </div>
+                    <div class="w-[95%] mx-auto">
+                        <p class="bg-[#007bd8] w-[15%] lg:w-[50%] lg:h-[2px] h-[2px]"></p>
+                    </div>
+                    <div>
+                        <ul class="text-[#5D7079] flex flex-col gap-3 w-[95%] mx-auto">
+                            <li class="hover:text-[blue]"><a href="about.html">About</a></li>
+                            <li class="hover:text-[blue]"><a href="contactus.html">Contact</a></li>
+                            <li class="hover:text-[blue]"><a href="faqs.html">FAQ</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-[#5D7079] w-[95%] mx-auto mt-[30px] lg:w-[80%] md:w-[80%] font:sans-serif">
+            <p class="">At WealthTrust FinancialInc, we're here to help you achieve your financial goals. From everyday transactions to larger foreign exchange transfers - we can help you with a range of accounts and services. Find out how you can use your account to stay on top of your money.</p>
+        </div>
+        <div class="mt-[25px] lg:mt-[80px] flex justify-center items-center">
+            <p class="bg-gray-300 h-[1px] lg:w-[80%] w-[90%]"></p>
+        </div>
+        <div class="flex justify-center items-center mt-[30px]">
+            <svg class="w-4 h-4 text-yellow-300 me-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+            </svg>
+            <svg class="w-4 h-4 text-yellow-300 me-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+            </svg>
+            <svg class="w-4 h-4 text-yellow-300 me-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+            </svg>
+            <svg class="w-4 h-4 text-yellow-300 me-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+            </svg>
+            <svg class="w-4 h-4 text-gray-300 me-1 dark:text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+            </svg>
+            <p class="ms-1 text-sm font-medium text-gray-500 dark:text-gray-400">4.95</p>
+            <p class="ms-1 text-sm font-medium text-gray-500 dark:text-gray-400">out of</p>
+            <p class="ms-1 text-sm font-medium text-gray-500 dark:text-gray-400">5</p>
+        </div>
+        <div class="flex justify-center mt-[30px] gap-2">
+            <p class="text-[gray]"> > |</p>
+            <a href="terms.html" class="text-[#007bd8] font-semibold">Terms</a>
+        </div>
+        <div class="text-center mt-[20px] pb-[30px]">
+            <p class="text-[#5D7079]">Copyright @ 2025 WealthTrust FinancialInc. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <!-- footer end -->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

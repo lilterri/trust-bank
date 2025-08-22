@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- navbar begin -->
+    <nav class="fixed top-0 right-0 left-0 bg-[white] w-[100%]">
+        <div class="flex justify-between items-center">
+            <div class="lg:ml-[20px] md:ml-[30px]">
+                <img src="image/bank-logo.png" alt="" class="w-[150px] h-[100px]">
+            </div>
+            <div class="">
+                <div class="hidden lg:flex gap-[30px] text-[#5D7079] lg:ml-[120px]">
+                    <div class="group">
+                        <a href="#" class="text-[blue] relative group">Personal</a>
+                        <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-md min-w-[250px]">
+                            <a href="bankaccount.html" class="block px-4 py-2 text-gray-800 hover:text-[blue] hover:bg-gray-200">Bank Account</a>
+                            <a href="" class="block px-4 py-2 text-gray-800 hover:text-[blue] hover:bg-gray-200">Credit Cards</a>
+                            <a href="mortgages.html" class="block px-4 py-2 text-gray-800 hover:text-[blue] hover:bg-gray-200">Mortgages</a>
+                        </div>
+                    </div>
+                    <a href="business.html" class="hover:text-[blue]">Business</a>
+                    <a href="commercial.html" class="hover:text-[blue]">Commercial</a>
+                    <a href="investment.html" class="hover:text-[blue]">Investments</a>
+                    <a href="loan.html" class="hover:text-[blue]">Loans</a>
+                    <a href="insurance.html" class="hover:text-[blue]">Insurance</a>
+                    <div class="group">
+                        <a href="#" class="text-[blue]">About Us</a>
+                        <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-md min-w-[250px]">
+                            <a href="about.html" class="block px-4 py-2 text-gray-800 hover:text-[blue] hover:bg-gray-200">About Us</a>
+                            <a href="contactus.html" class="block px-4 py-2 text-gray-800 hover:text-[blue] hover:bg-gray-200">Contact Us</a>
+                            <a href="faqs.html" class="block px-4 py-2 text-gray-800 hover:text-[blue] hover:bg-gray-200">FAQ</a>
+                            <a href="privacy.html" class="block px-4 py-2 text-gray-800 hover:text-[blue] hover:bg-gray-200">Privacy Policy</a>
+                            <a href="terms.html" class="block px-4 py-2 text-gray-800 hover:text-[blue] hover:bg-gray-200">Terms</a>
+                        </div>
+                    </div>
+                    <a href="wealth.html" class="hover:text-[blue]">Wealth</a>
+                </div>
+            </div>
+            <div class="mr-[10px] md:mr-[30px]">
+                <div class="text-[30px] w-[60px] border border-[blue] text-center lg:hidden" id="develop">
+                    <button class="fa-solid fa-bars" onclick="greeCee()"></button>
+                </div>
+                <div class="text-[30px] w-[60px] border border-[blue] text-center hidden lg:hidden" id="deploy">
+                    <button class="fa-solid fa-x" onclick="secTion()"></button>
+                </div>
+            </div>
+            <div class="hidden lg:flex gap-5 mr-[30px]">
+                <div class="border border-[green] hover:text-[white] text-[green] p-[10px] rounded-[8px] hover:bg-blue-500">
+                    <a href="">Login</a>
+                </div>
+                <div class="border border-[green] text-[white] bg-[green] p-[10px] rounded-[8px] hover:bg-blue-500">
+                    <a href="">Register</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- mobile nav -->
+        <div class="overflow-scroll transform transition-transform translate-y duration-300 w-[90%] md:w-[85%] mx-auto">
+            <div class="hidden lg:hidden flex flex-col justify-center gap-3 text-center bg-[white] w-[100%] mx-auto h-[355px] font-bold text-[gray]" id="demolish">
+                <div class="flex justify-center items-center text-center  font-bold transition-all ease-out duration-300 border- border-b-1 w-[100%] pb-[8px] pt-[8px] relative">
+                    <div class="lg:hidden hover:text-[blue] flex items-center gap-2">
+                        <span id="plusIcon" class="text-lg cursor-pointer" onclick="onPoint()">+</span>
+                        <span id="minusIcon" class="text-lg cursor-pointer hidden" onclick="outPoint()">-</span>
+                        <span>Personal</span>
+                    </div>
+                    <div class="bg-white rounded-2xl rounded-tl-none rounded-tr-none hidden lg:hidden transition-transform space-y-3 p-2 justify-start text-left w-[100%] absolute top-[100%] left-0" id="dropdownMenu">
+                        <div class="border-b-1">
+                            <a href="bankaccount.html" class="hover:text-[blue] font-bold transition-all ease-out duration-300 w-[100%] pb-[8px] flex justify-center text-center">Bank Account</a>
+                        </div>
+                        <div class="border-b-1">
+                            <a href="" class="hover:text-[blue] font-bold transition-all ease-out duration-300 w-[100%] pb-[8px] flex justify-center text-center">Credit Cards</a>
+                        </div>
+                        <div class="border-b-1">
+                            <a href="mortgages.html" class="hover:text-[blue] font-bold transition-all ease-out duration-300 w-[100%] pb-[8px] flex justify-center text-center">Mortgages</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="business.html" class="hover:text-[blue] font-bold transition-all ease-out duration-300 border-b-1 w-[100%] pb-[8px]">Business</a>
+                <a href="commercial.html" class="hover:text-[blue] font-bold transition-all ease-out duration-300 border-b-1 w-[100%] pb-[8px]">Commercial</a>
+                <a href="investment.html" class="hover:text-[blue] font-bold transition-all ease-out duration-300 border-b-1 w-[100%] pb-[8px]">Investments</a>
+                <a href="loan.html" class="hover:text-[blue] font-bold transition-all ease-out duration-300 border-b-1 w-[100%] pb-[8px]">Loans</a>
+                <a href="insurance.html" class="hover:text-[blue] font-bold transition-all ease-out duration-300 border-b-1 w-[100%] pb-[8px]">Insurance</a>
+                <a href="about.html" class="hover:text-[blue] font-bold transition-all ease-out duration-300 border-b-1 w-[100%] pb-[8px]">About Us</a>
+                <a href="wealth.html" class="hover:text-[blue] font-bold transition-all ease-out duration-300 border-b-1 w-[100%] pb-[8px]">Wealth</a>
+            </div>
+        </div>
+    </nav>
+    <!-- navbar end -->
+    <div class="bg-[url('./image/mortgage.png')] w-[100%] h-[50vh] mt-[100px] lg:mt-[100px] md:h-[40vh] lg:h-[70vh] bg-center bg-cover bg-no-repeat">
+        <div class="flex flex-col gap-3 pt-[90px] lg:pt-[90px] md:pt-[150px]">
+            <div class="w-[90%] mx-auto font-bold text-[25px] lg:text-[40px] lg:w-[70%] md:text-[30px]">
+                <h2><strong class="text-[#2a3f65]">Mortgages</strong></h2>
+            </div>
+            <div class="text-[#fff] w-[90%] mx-auto lg:text-[25px] font-semibold lg:w-[70%] md:text-[20px]">
+                <p class="lg:w-[70%] md:w-[60%]">We've got everything you need to make finding a mortgage straightforward.</p>
+            </div>
+            <div class="w-[90%] mx-auto mt-[30px] lg:w-[70%]">
+                <a href="" class="w-[135px] p-[10px] lg:p-[15px] h-[50px] text-[#fff] hover:bg-[#0f9c69] bg-[#007bd8] rounded-[5px]">Online Bank</a>
+            </div>
+        </div>
+    </div>
+    <div class="bg-[#fafafb] w-[100%] h-[810px] lg:h-[450px] md:h-[580px]">
+        <div class="lg:flex mx-auto lg:w-[90%] pt-[50px] lg:pt-[80px] md:pt-[80px]">
+            <div class="lg:flex lg:w-[50%] md:flex md:w-[90%] mx-auto">
+                <div class="border border-gray-300 mx-auto hover:border-[blue] bg-[white] p-[20px] w-[95%] lg:mt-[30px] md:w-[45%] lg:w-[45%] md:mt-[20px] md:p-[20px] lg:h-[210px]">
+                    <div class="flex flex-col gap-3">
+                        <div class="text-[#2A3F65] font-bold text-[20px]">
+                            <h2>Applying with us is easy</h2>
+                        </div>
+                        <div class="text-[#5D7079] lg:w-[95%] font-sans-serif">
+                            <p>Get started by finding out how much you could borrow. Or, if you're ready, find out how to apply.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="border border-gray-300 mx-auto hover:border-[blue] bg-[white] p-[20px] w-[95%] mt-[20px] lg:mt-[30px] md:w-[45%] mt-[20px] lg:w-[45%] md:mt-[20px] md:p-[20px] lg:h-[210px]">
+                    <div class="flex flex-col gap-3">
+                        <div class="text-[#2A3F65] font-bold text-[20px]">
+                            <h2>Manage your mortgage</h2>
+                        </div>
+                        <div class="text-[#5D7079] lg:w-[95%] font-sans-serif">
+                            <p>Got a mortgage with us already? Find out how to make changes, borrow more, move home or switch to another rate.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:flex lg:w-[50%] md:flex md:w-[90%] mx-auto">
+                <div class="border border-gray-300 mx-auto hover:border-[blue] bg-[white] p-[20px] w-[95%] lg:mt-[30px] md:w-[45%] mt-[20px] lg:w-[45%] md:mt-[20px] md:p-[20px] lg:h-[210px]">
+                    <div class="flex flex-col gap-3">
+                        <div class="text-[#2A3F65] font-bold text-[20px]">
+                            <h2>Compare our mortgage rates</h2>
+                        </div>
+                        <div class="text-[#5D7079] lg:w-[95%] font-sans-serif">
+                            <p>Choose Us and you could find a lower interest rate that could make your monthly repayments less.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="border border-gray-300 mx-auto hover:border-[blue] bg-[white] p-[20px] w-[95%] mt-[20px] lg:mt-[30px] md:w-[45%] lg:w-[45%] md:mt-[20px] md:p-[20px] lg:h-[210px]">
+                    <div class="flex flex-col gap-3">
+                        <div class="text-[#2A3F65] font-bold text-[20px]">
+                            <h2>Mortgages to suit you</h2>
+                        </div>
+                        <div class="text-[#5D7079] lg:w-[95%] font-sans-serif">
+                            <p>From remortgaging to getting your foot on the property ladder, take a look at our mortgages to find what could be right for you.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="lg:flex items-center lg:w-[90%] mx-auto lg:mt-[110px] md:mt-[70px]">
+        <div class="lg:flex flex-col lg:w-[50%]">
+            <div class="text-[#2a3f65] font-bold text-[20px] lg:text-[25px] mt-[10px] w-[95%] md:text-[25px] mx-auto md:w-[85%]">
+                <h2>What are the different types of mortgages?</h2>
+            </div>
+            <div class="w-[95%] mx-auto text-[#5D7079] mt-[10px] md:w-[85%] md:text-[18px]">
+                <p>The best mortgage for you will depend on your circumstances, plans, and whether you want to live in or rent out the property.</p>
+            </div>
+            <div class="container mx-auto p-2 sm:p-4 md:p-6 lg:p-8 mt-[30px] lg:mt-0">
+                <div id="accordion-collapse" data-accordion="collapse">
+                  <!-- Accordion Item 1 -->
+                  <h2 id="accordion-collapse-heading-1">
+                    <button type="button" class="flex justify-between items-center p-3 sm:p-4 md:p-5 lg:p-6 w-full font-medium text-left text-gray-500 border border-b-0 border-gray-200 rounded-t-xl bg-gray-50 hover:bg-gray-900 text-sm sm:text-base md:text-lg" data-accordion-target="#accordion-collapse-body-1" aria-expanded="true" aria-controls="accordion-collapse-body-1">
+                      <span>Fixed-rate Mortgages</span>
+                      <svg data-accordion-icon class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 rotate-180 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                      </svg>
+                    </button>
+                  </h2>
+                  <div id="accordion-collapse-body-1" class="hidden" aria-labelledby="accordion-collapse-heading-1">
+                    <div class="p-3 sm:p-4 md:p-5 lg:p-6 border border-b-0 border-gray-200 text-sm sm:text-base md:text-lg text-gray-500">
+                        <span>A fixed-rate mortgage will mean your monthly payments should stay the same until an agreed date, no matter what happens to interest rates in the market.</span>
+                    </div>
+                  </div>
+                  <!-- Accordion Item 2 -->
+                  <h2 id="accordion-collapse-heading-2">
+                    <button type="button" class="flex justify-between items-center p-3 sm:p-4 md:p-5 lg:p-6 w-full font-medium text-left text-gray-500 border border-gray-200 bg-gray-50 hover:bg-gray-900 text-sm sm:text-base md:text-lg" data-accordion-target="#accordion-collapse-body-2" aria-expanded="false" aria-controls="accordion-collapse-body-2">
+                      <span>Tracker Mortgages</span>
+                      <svg data-accordion-icon class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                      </svg>
+                    </button>
+                  </h2>
+                  <div id="accordion-collapse-body-2" class="hidden" aria-labelledby="accordion-collapse-body-2">
+                    <div class="p-3 sm:p-4 md:p-5 lg:p-6 border border-gray-200 text-sm sm:text-base md:text-lg text-gray-500">
+                      <span>Tracker mortgages follow the Bank of England’s Base Rate and rise or fall along with it. The interest rate charged is the Bank of England’s Base Rate plus an agreed margin. There are ‘lifetime’ trackers for the life of the mortgage and term trackers, which may be for 2 or 3 years.</span>
+                    </div>
+                  </div>
+                  <!-- Accordion Item 3 -->
+                   <h2 id="accordion-collapse-heading-3">
+                    <button type="button" class="flex justify-between items-center p-3 sm:p-4 md:p-5 lg:p-6 w-full font-medium text-left text-gray-500 border border-gray-200 bg-gray-50 hover:bg-gray-900 text-sm sm:text-base md:text-lg" data-accordion-target="#accordion-collapse-body-3" aria-expanded="false" aria-controls="accordion-collapse-body-3">
+                      <span>Standard variable rate (SVR) Mortgages</span>
+                      <svg data-accordion-icon class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                      </svg>
+                    </button>
+                  </h2>
+                  <div id="accordion-collapse-body-3" class="hidden" aria-labelledby="accordion-collapse-body-3">
+                    <div class="p-3 sm:p-4 md:p-5 lg:p-6 border border-gray-200 text-sm sm:text-base md:text-lg text-gray-500">
+                      <span>The SVR is the rate of interest that’s usually charged once a fixed rate or term tracker period ends. You can often move to another fixed mortgage or tracker product instead of moving onto a SVR.</span>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div class="w-[95%] mx-auto mt-[40px] lg:w-[45%] lg:mt-0">
+            <img src="image/mt.jpg" alt="" class="w-[100%] lg:w-[100%] lg:h-[400px] md:w-[90%] md:h-[500px] h-[300px] mx-auto">
+        </div>
+    </div>
+    <div class="lg:flex items-center lg:w-[90%] lg:mt-[130px] mx-auto">
+        <div class="w-[95%] mx-auto mt-[100px] lg:mt-0 lg:w-[50%]">
+            <img src="image/mt1.jpg" alt="" class="w-[100%] lg:w-[100%] md:w-[80%] lg:h-[400px] mx-auto">
+        </div>
+        <div class="lg:flex flex-col lg:w-[50%]">
+            <div class="text-[#2a3f65] font-bold text-[20px] lg:text-[25px] mt-[20px] w-[95%] md:text-[25px] mx-auto md:w-[85%]">
+                <h2>Making the most of your mortgage</h2>
+            </div>
+            <div class="w-[95%] mx-auto text-[#5D7079] mt-[10px] md:w-[85%] md:text-[18px]">
+                <p>Whether you're remortgaging or a first-time buyer, there's a lot to get your head around – from the different types of mortgages to finding out how much to borrow.</p>
+            </div>
+            <div class="flex gap-3 w-[95%] mx-auto bg-[#f7fbfc] p-[15px] lg:w-[90%] md:w-[85%] rounded-[30px] mt-[20px]">
+                <div class="text-[blue]">
+                    <i class="fa-regular fa-circle-check"></i>
+                </div>
+                <div class="text-[#5D7079] flex flex-col">
+                    <p>First-time buyer mortgages</p>
+                    <p>Find out everything you need on the journey to owning your own home.</p>
+                </div>
+            </div>
+            <div class="flex gap-3 w-[95%] mx-auto bg-[#f7fbfc] p-[15px] lg:w-[90%] md:w-[85%] rounded-[30px] mt-[20px]">
+                <div class="text-[blue]">
+                    <i class="fa-regular fa-circle-check"></i>
+                </div>
+                <div class="text-[#5D7079] flex flex-col">
+                    <p>Remortgage</p>
+                    <p>If your mortgage is with another lender, easily move it to Havin and you could get a better deal.</p>
+                </div>
+            </div>
+            <div class="flex gap-3 w-[95%] mx-auto bg-[#f7fbfc] p-[15px] lg:w-[90%] md:w-[85%] rounded-[30px] mt-[20px]">
+                <div class="text-[blue]">
+                    <i class="fa-regular fa-circle-check"></i>
+                </div>
+                <div class="text-[#5D7079] flex flex-col">
+                    <p>Mortgages for moving home</p>
+                    <p>Move home and you could get a better deal with an Havin mortgage.</p>
+                </div>
+            </div>
+            <div class="flex gap-3 w-[95%] mx-auto bg-[#f7fbfc] p-[15px] lg:w-[90%] md:w-[85%] rounded-[30px] mt-[20px]">
+                <div class="text-[blue]">
+                    <i class="fa-regular fa-circle-check"></i>
+                </div>
+                <div class="text-[#5D7079] flex flex-col">
+                    <p>Buy-to-let mortgages</p>
+                    <p>Explore how our buy-to-let mortgages could make it easier to buy your rental property.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-[#007bd8] w-[100%] mt-[80px] lg:mt-[130px] h-[300px]">
+        <div class="font-semibold text-center text-white pt-[40px]">
+            <span>Smarter Banking</span>
+        </div>
+        <div class="font-bold text-center text-white text-[20px] mt-[10px] md:text-[25px] lg:text-[30px]">
+            <h3 class="lg:w-[70%] md:w-[85%] mx-auto">Banking at the speed of business, Spend less time banking and more time growing your business.</h3>
+        </div>
+        <div class="flex justify-center mt-[40px] gap-3">
+            <div class="bg-[#0fc9bb] rounded-[5px] hover:bg-[#0f9c69] w-[150px] h-[40px] text-white font-semibold text-center p-[5px]">
+                <a href="business.html">Business Account</a>
+            </div>
+            <div class="bg-[#0f9c69] rounded-[5px] hover:bg-[#0fc9bb] w-[180px] h-[40px] text-white font-semibold text-center p-[5px]">
+                <a href="commercial.html">Commercial Account</a>
+            </div>
+        </div>
+    </div>
+    <!-- footer begin -->
+    <footer>
+        <div class="lg:flex flex-row items-center lg:w-[80%] mx-auto">
+            <div class="md:flex items-center gap-15 md:w-[80%] mx-auto lg:w-[70%]">
+                <div class="lg:flex flex-col lg:w-[45%] md:flex flex-col md:w-[45%]">
+                    <div class="w-[100%] mt-[40px] lg:mt-0 md:mt-0">
+                        <img src="image/bank-logo.png" alt="" class="w-[90%] lg:w-[90%] h-[170px] md:w-[95%] mx-auto">
+                    </div>
+                    <div class="text-[#5D7079] w-[95%] mx-auto mt-[20px] lg:mt-0 md:mt-0 lg:w-[100%] md:w-[95%] sans-serif">
+                        <p>Find an account that works for you, whether you're an individual, start-up, sole trader or SME.</p>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-3 lg:w-[20%] md:w-[45%]">
+                    <div class="text-[#2A3F65] font-bold text-[20px] w-[95%] mt-[30px] mx-auto">
+                        <h2>Personal</h2>
+                    </div>
+                    <div class="w-[95%] mx-auto">
+                        <p class="bg-[#007bd8] w-[15%] lg:w-[50%] lg:h-[2px] h-[2px]"></p>
+                    </div>
+                    <div>
+                        <ul class="text-[#5D7079] flex flex-col gap-3 w-[95%] mx-auto">
+                            <li class="hover:text-[blue]"><a href="bankaccount.html">Bank Accounts</a></li>
+                            <li class="hover:text-[blue]"><a href="">Credit cards</a></li>
+                            <li class="hover:text-[blue]"><a href="mortgages.html">Mortgages</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="md:flex items-center gap-20 md:w-[80%] mx-auto lg:w-[60%]">
+                <div class="flex flex-col gap-3 lg:w-[20%] md:w-[45%]">
+                    <div class="text-[#2A3F65] font-bold text-[20px] w-[95%] mt-[30px] mx-auto">
+                        <h2>Resources</h2>
+                    </div>
+                    <div class="w-[95%] mx-auto">
+                        <p class="bg-[#007bd8] w-[15%] lg:w-[50%] lg:h-[2px] h-[2px]"></p>
+                    </div>
+                    <div>
+                        <ul class="text-[#5D7079] flex flex-col gap-3 w-[95%] mx-auto">
+                            <li class="hover:text-[blue]"><a href="investment.html">Investment</a></li>
+                            <li class="hover:text-[blue]"><a href="loan.html">Loan</a></li>
+                            <li class="hover:text-[blue]"><a href="insurance.html">Insurance</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-3 lg:w-[20%] md:w-[45%]">
+                    <div class="text-[#2A3F65] font-bold text-[20px] w-[95%] mt-[30px] mx-auto">
+                        <h2>About Us</h2>
+                    </div>
+                    <div class="w-[95%] mx-auto">
+                        <p class="bg-[#007bd8] w-[15%] lg:w-[50%] lg:h-[2px] h-[2px]"></p>
+                    </div>
+                    <div>
+                        <ul class="text-[#5D7079] flex flex-col gap-3 w-[95%] mx-auto">
+                            <li class="hover:text-[blue]"><a href="about.html">About</a></li>
+                            <li class="hover:text-[blue]"><a href="contactus.html">Contact</a></li>
+                            <li class="hover:text-[blue]"><a href="faqs.html">FAQ</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-[#5D7079] w-[95%] mx-auto mt-[30px] lg:w-[80%] md:w-[80%] font:sans-serif">
+            <p class="">At WealthTrust FinancialInc, we're here to help you achieve your financial goals. From everyday transactions to larger foreign exchange transfers - we can help you with a range of accounts and services. Find out how you can use your account to stay on top of your money.</p>
+        </div>
+        <div class="mt-[25px] lg:mt-[80px] flex justify-center items-center">
+            <p class="bg-gray-300 h-[1px] lg:w-[80%] w-[90%]"></p>
+        </div>
+        <div class="flex justify-center items-center mt-[30px]">
+            <svg class="w-4 h-4 text-yellow-300 me-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+            </svg>
+            <svg class="w-4 h-4 text-yellow-300 me-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+            </svg>
+            <svg class="w-4 h-4 text-yellow-300 me-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+            </svg>
+            <svg class="w-4 h-4 text-yellow-300 me-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+            </svg>
+            <svg class="w-4 h-4 text-gray-300 me-1 dark:text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+            </svg>
+            <p class="ms-1 text-sm font-medium text-gray-500 dark:text-gray-400">4.95</p>
+            <p class="ms-1 text-sm font-medium text-gray-500 dark:text-gray-400">out of</p>
+            <p class="ms-1 text-sm font-medium text-gray-500 dark:text-gray-400">5</p>
+        </div>
+        <div class="flex justify-center mt-[30px] gap-2">
+            <p class="text-[gray]"> > |</p>
+            <a href="terms.html" class="text-[#007bd8] font-semibold">Terms</a>
+        </div>
+        <div class="text-center mt-[20px] pb-[30px]">
+            <p class="text-[#5D7079]">Copyright @ 2025 WealthTrust FinancialInc. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <!-- footer end -->
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

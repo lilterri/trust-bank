@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- navbar begin -->
+    <nav class="fixed top-0 right-0 left-0 bg-[white] w-[100%]">
+        <div class="flex justify-between items-center">
+            <div class="lg:ml-[20px] md:ml-[30px]">
+                <img src="image/bank-logo.png" alt="" class="w-[150px] h-[100px]">
+            </div>
+            <div class="">
+                <div class="hidden lg:flex gap-[30px] text-[#5D7079] lg:ml-[120px]">
+                    <div class="group">
+                        <a href="#" class="text-[blue] relative group">Personal</a>
+                        <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-md min-w-[250px]">
+                            <a href="bankaccount.html" class="block px-4 py-2 text-gray-800 hover:text-[blue] hover:bg-gray-200">Bank Account</a>
+                            <a href="" class="block px-4 py-2 text-gray-800 hover:text-[blue] hover:bg-gray-200">Credit Cards</a>
+                            <a href="mortgages.html" class="block px-4 py-2 text-gray-800 hover:text-[blue] hover:bg-gray-200">Mortgages</a>
+                        </div>
+                    </div>
+                    <a href="business.html" class="hover:text-[blue]">Business</a>
+                    <a href="commercial.html" class="hover:text-[blue]">Commercial</a>
+                    <a href="investment.html" class="hover:text-[blue]">Investments</a>
+                    <a href="loan.html" class="hover:text-[blue]">Loans</a>
+                    <a href="insurance.html" class="hover:text-[blue]">Insurance</a>
+                    <div class="group">
+                        <a href="#" class="text-[blue]">About Us</a>
+                        <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-md min-w-[250px]">
+                            <a href="about.html" class="block px-4 py-2 text-gray-800 hover:text-[blue] hover:bg-gray-200">About Us</a>
+                            <a href="contactus.html" class="block px-4 py-2 text-gray-800 hover:text-[blue] hover:bg-gray-200">Contact Us</a>
+                            <a href="faqs.html" class="block px-4 py-2 text-gray-800 hover:text-[blue] hover:bg-gray-200">FAQ</a>
+                            <a href="privacy.html" class="block px-4 py-2 text-gray-800 hover:text-[blue] hover:bg-gray-200">Privacy Policy</a>
+                            <a href="terms.html" class="block px-4 py-2 text-gray-800 hover:text-[blue] hover:bg-gray-200">Terms</a>
+                        </div>
+                    </div>
+                    <a href="wealth.html" class="hover:text-[blue]">Wealth</a>
+                </div>
+            </div>
+            <div class="mr-[10px] md:mr-[30px]">
+                <div class="text-[30px] w-[60px] border border-[blue] text-center lg:hidden" id="develop">
+                    <button class="fa-solid fa-bars" onclick="greeCee()"></button>
+                </div>
+                <div class="text-[30px] w-[60px] border border-[blue] text-center hidden lg:hidden" id="deploy">
+                    <button class="fa-solid fa-x" onclick="secTion()"></button>
+                </div>
+            </div>
+            <div class="hidden lg:flex gap-5 mr-[30px]">
+                <div class="border border-[green] hover:text-[white] text-[green] p-[10px] rounded-[8px] hover:bg-blue-500">
+                    <a href="">Login</a>
+                </div>
+                <div class="border border-[green] text-[white] bg-[green] p-[10px] rounded-[8px] hover:bg-blue-500">
+                    <a href="">Register</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- mobile nav -->
+        <div class="overflow-scroll transform transition-transform translate-y duration-300 w-[90%] md:w-[85%] mx-auto">
+            <div class="hidden lg:hidden flex flex-col justify-center gap-3 text-center bg-[white] w-[100%] mx-auto h-[355px] font-bold text-[gray]" id="demolish">
+                <div class="flex justify-center items-center text-center  font-bold transition-all ease-out duration-300 border- border-b-1 w-[100%] pb-[8px] pt-[8px] relative">
+                    <div class="lg:hidden hover:text-[blue] flex items-center gap-2">
+                        <span id="plusIcon" class="text-lg cursor-pointer" onclick="onPoint()">+</span>
+                        <span id="minusIcon" class="text-lg cursor-pointer hidden" onclick="outPoint()">-</span>
+                        <span>Personal</span>
+                    </div>
+                    <div class="bg-white rounded-2xl rounded-tl-none rounded-tr-none hidden lg:hidden transition-transform space-y-3 p-2 justify-start text-left w-[100%] absolute top-[100%] left-0" id="dropdownMenu">
+                        <div class="border-b-1">
+                            <a href="bankaccount.html" class="hover:text-[blue] font-bold transition-all ease-out duration-300 w-[100%] pb-[8px] flex justify-center text-center">Bank Account</a>
+                        </div>
+                        <div class="border-b-1">
+                            <a href="" class="hover:text-[blue] font-bold transition-all ease-out duration-300 w-[100%] pb-[8px] flex justify-center text-center">Credit Cards</a>
+                        </div>
+                        <div class="border-b-1">
+                            <a href="mortgages.html" class="hover:text-[blue] font-bold transition-all ease-out duration-300 w-[100%] pb-[8px] flex justify-center text-center">Mortgages</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="business.html" class="hover:text-[blue] font-bold transition-all ease-out duration-300 border-b-1 w-[100%] pb-[8px]">Business</a>
+                <a href="commercial.html" class="hover:text-[blue] font-bold transition-all ease-out duration-300 border-b-1 w-[100%] pb-[8px]">Commercial</a>
+                <a href="investment.html" class="hover:text-[blue] font-bold transition-all ease-out duration-300 border-b-1 w-[100%] pb-[8px]">Investments</a>
+                <a href="loan.html" class="hover:text-[blue] font-bold transition-all ease-out duration-300 border-b-1 w-[100%] pb-[8px]">Loans</a>
+                <a href="insurance.html" class="hover:text-[blue] font-bold transition-all ease-out duration-300 border-b-1 w-[100%] pb-[8px]">Insurance</a>
+                <a href="about.html" class="hover:text-[blue] font-bold transition-all ease-out duration-300 border-b-1 w-[100%] pb-[8px]">About Us</a>
+                <a href="wealth.html" class="hover:text-[blue] font-bold transition-all ease-out duration-300 border-b-1 w-[100%] pb-[8px]">Wealth</a>
+            </div>
+        </div>
+    </nav>
+    <!-- navbar end -->
+    <div class="bg-[url('./image/pr.jpg')] w-[100%] h-[30vh] md:h-[40vh] mt-[100px] lg:mt-[100px] lg:h-[60vh] bg-center bg-cover bg-no-repeat">
+        <div class="w-[90%] mx-auto font-bold text-[25px] pt-[70px] lg:text-[40px] md:pt-[150px] lg:w-[70%] md:w-[30%] md:text-[30px]">
+            <h2><strong class="text-[white]">Privacy Policy</strong></h2>
+        </div>
+    </div>
+    <div class="bg-[#e6f2f5] w-[95%] h-[380px] lg:h-[160px] lg:w-[90%] md:w-[85%] md:h-[230px] mx-auto mt-[80px] rounded-[5px]">
+        <p class="text-[#5D7079] w-[90%] mx-auto pt-[30px]">Your privacy is important to us. This Online Privacy Policy explains how we collect, share, use, and protect information when you visit or use this online service and any other online services offered by the U.k, U.S. and Canada banking and non-banking affiliates and subsidiaries of Wealthtrust Bank that link to or reference this policy (collectively, our “online services”). This policy covers Havin’s many online services, including the Havin websites, as well as any interactions you may have while viewing content provided through one of Havin’s digital advertising campaigns.</p>
+    </div>
+    <div>
+        <div class="text-[#2a3f65] font-semibold mt-[50px] lg:w-[90%] md:w-[85%] w-[95%] mx-auto">
+            <h4>Information we collect</h4>
+        </div>
+        <div class="text-[#2a3f65] font-bold text-[20px] lg:text-[25px] lg:w-[90%] mt-[10px] w-[95%] md:text-[25px] mx-auto md:w-[85%]">
+            <h2>Personal Information</h2>
+        </div>
+        <div class="w-[95%] mx-auto text-[#5D7079] text-[15px] mt-[10px] md:w-[85%] lg:w-[90%] md:text-[18px]">
+            <p>When you visit or use our online services, we may collect personal information from or about you including your name, email address, mailing address, telephone number(s), account numbers, limited location information, user name and password. We may also collect payment card information, tax identification numbers, driver’s license numbers (or comparable) when you provide such information while using our online services and where we believe it is reasonably required for ordinary business purposes.</p>
+        </div>
+    </div>
+    <div>
+        <div class="text-[#2a3f65] font-bold text-[20px] lg:text-[25px] lg:w-[90%] mt-[20px] w-[95%] md:text-[25px] mx-auto md:w-[85%]">
+            <h2>Usage and Other Information</h2>
+        </div>
+        <div class="w-[95%] mx-auto text-[#5D7079] text-[15px] mt-[10px] md:w-[85%] lg:w-[90%] md:text-[18px]">
+            <p>In addition to the personal information described above, we may collect certain information about your use of our online services. For example, we may capture the IP address of the device you use to connect to the online service, the type of operating system and browser you use, and information about the site you came from, the parts of our online service you access, and the site you visit next. We or our third-party partners may also use cookies, web beacons or other technologies to collect and store other information about your visit to, or use of, our online services. In addition, we may later associate the usage and other information we collect online with personal information about you.</p>
+        </div>
+    </div>
+    <div>
+        <div class="text-[#2a3f65] font-bold text-[20px] lg:text-[25px] lg:w-[90%] mt-[20px] w-[95%] md:text-[25px] mx-auto md:w-[85%]">
+            <h2>Additional Sources of Information</h2>
+        </div>
+        <div class="w-[95%] mx-auto text-[#5D7079] text-[15px] mt-[10px] md:w-[85%] lg:w-[90%] md:text-[18px]">
+            <p>We may also collect information about you from additional online and offline sources including from co-branded partner sites or commercially available third-party sources, such as credit reporting agencies. We may combine this information with the personal and other information we have collected about you under this Online Privacy Policy.</p>
+        </div>
+    </div>
+    <div>
+        <div class="text-[#2a3f65] font-bold text-[20px] lg:text-[25px] lg:w-[90%] mt-[20px] w-[95%] md:text-[25px] mx-auto md:w-[85%]">
+            <h2>Use of Information</h2>
+        </div>
+        <div class="w-[95%] mx-auto text-[#5D7079] text-[15px] mt-[10px] md:w-[85%] lg:w-[90%] md:text-[18px]">
+            <p>We use the information discussed above in the following ways:</p>
+        </div>
+    </div>
+    <div>
+        <ol type="1" class="text-[#5D7079] flex flex-col gap-3 w-[90%] lg:w-[87%] md:w-[80%] mx-auto mt-[10px]">
+            <li>1. Processing applications and transactions;</li>
+            <li>2. Verifying your identity (such as when you access your account information);</li>
+            <li>3. Preventing fraud and enhancing the security of your account or our online services;</li>
+            <li>4. Responding to your requests and communicating with you;</li>
+            <li>5. Managing your preferences;</li>
+            <li>6. Performing analytics concerning your use of our online services, including your responses to our emails and the pages and advertisements you view;</li>
+            <li>7. Providing you tailored content and marketing messages; operating, evaluating and improving our business (including developing new products and services; improving existing products and services; performing data analytics; and performing accounting, auditing and other internal functions);</li>
+            <li>8. Complying with and enforcing applicable legal requirements, relevant industry standards, contractual obligations and our policies; and</li>
+            <li>9. For any other purposes that we may specifically disclose at the time you provide or we collect your information.</li>
+        </ol>
+        <div class="w-[95%] mx-auto text-[#5D7079] text-[15px] mt-[10px] md:w-[85%] lg:w-[90%] md:text-[18px]">
+            <p>We may also use data that we collect on an aggregate or anonymous basis (such that it does not identify any individual customers) for various business purposes, where permissible under applicable laws and regulations.</p>
+        </div>
+    </div>
+    <div>
+        <div class="text-[#2a3f65] font-bold text-[20px] lg:text-[25px] lg:w-[90%] mt-[20px] w-[95%] md:text-[25px] mx-auto md:w-[85%]">
+            <h2>Disclosure of Information</h2>
+        </div>
+        <div class="w-[95%] mx-auto text-[#5D7079] text-[15px] mt-[10px] md:w-[85%] lg:w-[90%] md:text-[18px]">
+            <p>We may share the information we collect from and about you with our affiliates and other third parties as described below. In particular, we may share your information with:</p>
+        </div>
+        <ol type="1" class="text-[#5D7079] flex flex-col gap-3 w-[90%] lg:w-[87%] md:w-[80%] mx-auto mt-[10px]">
+            <li>1. Having third-party service providers;</li>
+            <li>2. Having affiliated websites and businesses in an effort to bring you improved service across our family of products and services, when permissible under relevant laws and regulations;</li>
+            <li>3. Other companies to bring you co-branded services, products or programs that you have requested;</li>
+            <li>4. Third parties or affiliates in connection with a corporate transaction, such as a sale, consolidation or merger of Havin businesses; and</li>
+            <li>5. Other third parties to comply with legal requirements such as the demands of applicable subpoenas and court orders; to verify or enforce our terms of use, our other rights, or other applicable policies; to address fraud, security or technical issues; to respond to an emergency; or otherwise to protect the rights, property or security of our customers or third parties.</li>
+        </ol>
+        <div class="w-[95%] mx-auto text-[#5D7079] text-[15px] mt-[10px] md:w-[85%] lg:w-[90%] md:text-[18px]">
+            <p>Where appropriate, we will limit sharing of your information in accordance with the choices you have provided us.</p>
+        </div>
+        <div class="w-[95%] mx-auto text-[#5D7079] text-[15px] mt-[10px] md:w-[85%] lg:w-[90%] md:text-[18px]">
+            <p>We may share anonymous or aggregated information with third parties to help deliver products, services, and content that are better tailored to the users of our online services and for other purposes.</p>
+        </div>
+    </div>
+    <div>
+        <div class="text-[#2a3f65] font-bold text-[20px] lg:text-[25px] lg:w-[90%] mt-[20px] w-[95%] md:text-[25px] mx-auto md:w-[85%]">
+            <h2>Understanding Cookies, Web Beacons and Other Tracking Technologies</h2>
+        </div>
+        <div class="w-[95%] mx-auto text-[#5D7079] text-[15px] mt-[10px] md:w-[85%] lg:w-[90%] md:text-[18px]">
+            <p>We, or our service providers, and other companies we work with may deploy and use cookies, web beacons, local shared objects and other tracking technologies for the following purposes: fraud prevention and monitoring our advertising and marketing campaign performance. Some of these tracking tools may detect characteristics or settings of the specific device you use to access our online services.</p>
+        </div>
+        <div class="w-[95%] mx-auto text-[#5D7079] text-[15px] mt-[10px] md:w-[85%] lg:w-[90%] md:text-[18px]">
+            <p>“Cookies” are small amounts of data a website can send to a visitor’s web browser. They are often stored on the device you are using to help track your areas of interest. Cookies may also enable us or our service providers and other companies we work with to relate your use of our online services over time to customize your experience. Most web browsers allow you to adjust your browser settings to decline or delete cookies, but doing so may degrade your experience with our online services.</p>
+        </div>
+        <div class="w-[95%] mx-auto text-[#5D7079] text-[15px] mt-[10px] md:w-[85%] lg:w-[90%] md:text-[18px]">
+            <p>Clear GIFs, pixel tags or web beacons—which are typically one-pixel, transparent images located on a webpage or in an email or other message—or similar technologies may be used on our sites and in some of our digital communications (such as email or other marketing messages). They may also be used when you are served advertisements or you otherwise interact with advertisements outside of our online services. These are principally used to help recognize users, assess traffic patterns and measure site or campaign engagement.</p>
+        </div>
+        <div class="w-[95%] mx-auto text-[#5D7079] text-[15px] mt-[10px] md:w-[85%] lg:w-[90%] md:text-[18px]">
+            <p>Local Shared Objects, sometimes referred to as “flash cookies” may be stored on your hard drive using a media player or other software installed on your device. Local Shared Objects are similar to cookies in terms of their operation, but may not be managed in your browser in the same way.</p>
+        </div>
+    </div>
+    <div>
+        <div class="text-[#2a3f65] font-bold text-[20px] lg:text-[25px] lg:w-[90%] mt-[20px] w-[95%] md:text-[25px] mx-auto md:w-[85%]">
+            <h2>Online advertising</h2>
+        </div>
+        <div class="w-[95%] mx-auto text-[#5D7079] text-[15px] mt-[10px] md:w-[85%] lg:w-[90%] md:text-[18px]">
+            <p>You will see advertisements when you use many of our online services. These advertisements may be for our own products or services (including pre-screened offers of credit) or for products and services offered by third parties. Which advertisements you see is often determined using the information we or our affiliates, service providers and other companies that we work with have about you, including information about your relationships with us (e.g., types of accounts held, transactional information, location of banking activity). To that end, where permitted by applicable law, we may share with others the information we collect from and about you as stated in this policy under Information We Collect.</p>
+        </div>
+        <div class="w-[95%] mx-auto text-[#5D7079] text-[15px] mt-[10px] md:w-[85%] lg:w-[90%] md:text-[18px]">
+            <p>Online behavioral advertising (also known as “OBA” or “interest-based advertising”) refers to the practice of collecting information from a computer or device regarding a visitor’s web-browsing activities across non-affiliated websites over time in order to deliver advertisements that may be of interest to that visitor based on their browsing history. Through OBA, we hope to deliver advertisements that are most likely to be of interest to you using information about your other web-browsing activities (e.g., the web pages you visit, search terms you enter, and the way you move through our online services on your computer or device) or your personal profile (e.g., demographic or location information). Certain companies we work with may set cookies and use related tracking technologies, such as the clear GIFs discussed above, throughout our online services or in our communications to support these OBA efforts. If you do not want your information collected and used by the companies we work with for OBA purposes, you can opt out of this form of OBA by following the instructions in the next section.</p>
+        </div>
+    </div>
+    <div>
+        <div class="text-[#2a3f65] font-bold text-[20px] lg:text-[25px] lg:w-[90%] mt-[20px] w-[95%] md:text-[25px] mx-auto md:w-[85%]">
+            <h2>Linking to Third-Party Websites</h2>
+        </div>
+        <div class="w-[95%] mx-auto text-[#5D7079] text-[15px] mt-[10px] md:w-[85%] lg:w-[90%] md:text-[18px]">
+            <p>Havin may provide links to websites that are owned or operated by other companies ("third-party websites"). When you use a link online to visit a third-party website, you will be subject to that website’s privacy and security practices, which may differ from ours. You should familiarize yourself with the privacy policy, terms of use and security practices of the linked third-party website before providing any information on that website.</p>
+        </div>
+    </div>
+    <div>
+        <div class="text-[#2a3f65] font-bold text-[20px] lg:text-[25px] lg:w-[90%] mt-[20px] w-[95%] md:text-[25px] mx-auto md:w-[85%]">
+            <h2>Security</h2>
+        </div>
+        <div class="w-[95%] mx-auto text-[#5D7079] text-[15px] mt-[10px] md:w-[85%] lg:w-[90%] md:text-[18px]">
+            <p>We use reasonable physical, electronic, and procedural safeguards that comply with legal and regulatory standards to protect and limit access to personal information. This includes device safeguards and secured files and buildings Visit our Security Center for additional information about how we protect your Personal Information.</p>
+        </div>
+        <div class="w-[95%] mx-auto text-[#5D7079] text-[15px] mt-[10px] md:w-[85%] lg:w-[90%] md:text-[18px]">
+            <p>Please note that information you send to us electronically may not be secure when it is transmitted to us. We recommend that you do not use unsecure channels to communicate sensitive or confidential information (such as your tax identification number) to us.</p>
+        </div>
+    </div>
+    <div>
+        <div class="text-[#2a3f65] font-bold text-[20px] lg:text-[25px] lg:w-[90%] mt-[20px] w-[95%] md:text-[25px] mx-auto md:w-[85%]">
+            <h2>Updating Your Information</h2>
+        </div>
+        <div class="w-[95%] mx-auto text-[#5D7079] text-[15px] mt-[10px] md:w-[85%] lg:w-[90%] md:text-[18px]">
+            <p>Keeping your account information up-to-date is very important. You may review, or update certain account information by logging in and accessing the “Customer Center” section. If you cannot change the incorrect information online, or you prefer to request changes offline, please use the Contact Us option on our site, or call or write to us using the contact information listed on your account statements, records, or other account materials. You can also speak to one of our branch representatives, your Financial Advisor, or your designated account representative.</p>
+        </div>
+    </div>
+    <div>
+        <div class="text-[#2a3f65] font-bold text-[20px] lg:text-[25px] lg:w-[90%] mt-[20px] w-[95%] md:text-[25px] mx-auto md:w-[85%]">
+            <h2>Changes to this Online Privacy Policy</h2>
+        </div>
+        <div class="w-[95%] mx-auto text-[#5D7079] text-[15px] mt-[10px] md:w-[85%] lg:w-[90%] md:text-[18px]">
+            <p>We may change this Online Privacy Policy from time to time. When we do, we will let you know by appropriate means such as by posting the revised policy on this page with a new “Last Updated” date. Any changes to this Online Privacy Policy will become effective when posted unless indicated otherwise.</p>
+        </div>
+    </div>
+    <div class="bg-[#007bd8] w-[100%] mt-[80px] h-[300px]">
+        <div class="font-semibold text-center text-white pt-[40px]">
+            <span>Smarter Banking</span>
+        </div>
+        <div class="font-bold text-center text-white text-[20px] mt-[10px] md:text-[25px] lg:text-[30px]">
+            <h3 class="lg:w-[70%] md:w-[85%] mx-auto">Banking at the speed of business, Spend less time banking and more time growing your business.</h3>
+        </div>
+        <div class="flex justify-center mt-[40px] gap-3">
+            <div class="bg-[#0fc9bb] rounded-[5px] hover:bg-[#0f9c69] w-[150px] h-[40px] text-white font-semibold text-center p-[5px]">
+                <a href="business.html">Business Account</a>
+            </div>
+            <div class="bg-[#0f9c69] rounded-[5px] hover:bg-[#0fc9bb] w-[180px] h-[40px] text-white font-semibold text-center p-[5px]">
+                <a href="commercial.html">Commercial Account</a>
+            </div>
+        </div>
+    </div>
+    <!-- footer begin -->
+    <footer>
+        <div class="lg:flex flex-row items-center lg:w-[80%] mx-auto">
+            <div class="md:flex items-center gap-15 md:w-[80%] mx-auto lg:w-[70%]">
+                <div class="lg:flex flex-col lg:w-[45%] md:flex flex-col md:w-[45%]">
+                    <div class="w-[100%] mt-[40px] lg:mt-0 md:mt-0">
+                        <img src="image/bank-logo.png" alt="" class="w-[90%] lg:w-[90%] h-[170px] md:w-[95%] mx-auto">
+                    </div>
+                    <div class="text-[#5D7079] w-[95%] mx-auto mt-[20px] lg:mt-0 md:mt-0 lg:w-[100%] md:w-[95%] sans-serif">
+                        <p>Find an account that works for you, whether you're an individual, start-up, sole trader or SME.</p>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-3 lg:w-[20%] md:w-[45%]">
+                    <div class="text-[#2A3F65] font-bold text-[20px] w-[95%] mt-[30px] mx-auto">
+                        <h2>Personal</h2>
+                    </div>
+                    <div class="w-[95%] mx-auto">
+                        <p class="bg-[#007bd8] w-[15%] lg:w-[50%] lg:h-[2px] h-[2px]"></p>
+                    </div>
+                    <div>
+                        <ul class="text-[#5D7079] flex flex-col gap-3 w-[95%] mx-auto">
+                            <li class="hover:text-[blue]"><a href="bankaccount.html">Bank Accounts</a></li>
+                            <li class="hover:text-[blue]"><a href="">Credit cards</a></li>
+                            <li class="hover:text-[blue]"><a href="mortgages.html">Mortgages</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="md:flex items-center gap-20 md:w-[80%] mx-auto lg:w-[60%]">
+                <div class="flex flex-col gap-3 lg:w-[20%] md:w-[45%]">
+                    <div class="text-[#2A3F65] font-bold text-[20px] w-[95%] mt-[30px] mx-auto">
+                        <h2>Resources</h2>
+                    </div>
+                    <div class="w-[95%] mx-auto">
+                        <p class="bg-[#007bd8] w-[15%] lg:w-[50%] lg:h-[2px] h-[2px]"></p>
+                    </div>
+                    <div>
+                        <ul class="text-[#5D7079] flex flex-col gap-3 w-[95%] mx-auto">
+                            <li class="hover:text-[blue]"><a href="investment.html">Investment</a></li>
+                            <li class="hover:text-[blue]"><a href="loan.html">Loan</a></li>
+                            <li class="hover:text-[blue]"><a href="insurance.html">Insurance</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-3 lg:w-[20%] md:w-[45%]">
+                    <div class="text-[#2A3F65] font-bold text-[20px] w-[95%] mt-[30px] mx-auto">
+                        <h2>About Us</h2>
+                    </div>
+                    <div class="w-[95%] mx-auto">
+                        <p class="bg-[#007bd8] w-[15%] lg:w-[50%] lg:h-[2px] h-[2px]"></p>
+                    </div>
+                    <div>
+                        <ul class="text-[#5D7079] flex flex-col gap-3 w-[95%] mx-auto">
+                            <li class="hover:text-[blue]"><a href="about.html">About</a></li>
+                            <li class="hover:text-[blue]"><a href="contactus.html">Contact</a></li>
+                            <li class="hover:text-[blue]"><a href="faqs.html">FAQ</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-[#5D7079] w-[95%] mx-auto mt-[30px] lg:w-[80%] md:w-[80%] font:sans-serif">
+            <p class="">At WealthTrust FinancialInc, we're here to help you achieve your financial goals. From everyday transactions to larger foreign exchange transfers - we can help you with a range of accounts and services. Find out how you can use your account to stay on top of your money.</p>
+        </div>
+        <div class="mt-[25px] lg:mt-[80px] flex justify-center items-center">
+            <p class="bg-gray-300 h-[1px] lg:w-[80%] w-[90%]"></p>
+        </div>
+        <div class="flex justify-center items-center mt-[30px]">
+            <svg class="w-4 h-4 text-yellow-300 me-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+            </svg>
+            <svg class="w-4 h-4 text-yellow-300 me-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+            </svg>
+            <svg class="w-4 h-4 text-yellow-300 me-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+            </svg>
+            <svg class="w-4 h-4 text-yellow-300 me-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+            </svg>
+            <svg class="w-4 h-4 text-gray-300 me-1 dark:text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+            </svg>
+            <p class="ms-1 text-sm font-medium text-gray-500 dark:text-gray-400">4.95</p>
+            <p class="ms-1 text-sm font-medium text-gray-500 dark:text-gray-400">out of</p>
+            <p class="ms-1 text-sm font-medium text-gray-500 dark:text-gray-400">5</p>
+        </div>
+        <div class="flex justify-center mt-[30px] gap-2">
+            <p class="text-[gray]"> > |</p>
+            <a href="terms.html" class="text-[#007bd8] font-semibold">Terms</a>
+        </div>
+        <div class="text-center mt-[20px] pb-[30px]">
+            <p class="text-[#5D7079]">Copyright @ 2025 WealthTrust FinancialInc. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <!-- footer end -->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
