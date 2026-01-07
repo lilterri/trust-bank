@@ -62,34 +62,34 @@
 
         <!-- mobile nav -->
         <div class="overflow-scroll transform transition-transform translate-y duration-300 w-[90%] md:w-[85%] mx-auto">
-            <div id="demolish" class="overflow-hidden max-h-0 transition-[max-height] duration-500 ease-in-out flex flex-col gap-3 lg:hidden text-center bg-white w-full font-bold text-gray-700">
-                <div class="flex justify-center items-center text-center  font-bold transition-all ease-out duration-300 border- border-b-1 w-[100%] pb-[8px] pt-[8px] relative">
-                    <div class="lg:hidden hover:text-[blue] flex items-center gap-2">
-                        <span id="plusIcon" class="text-lg cursor-pointer" onclick="onPoint()">+</span>
-                        <span id="minusIcon" class="text-lg cursor-pointer hidden" onclick="outPoint()">-</span>
-                        <span>Personal</span>
-                    </div>
-                    <div class="bg-white rounded-2xl rounded-tl-none rounded-tr-none hidden lg:hidden transition-transform space-y-3 p-2 justify-start text-left w-[100%] absolute top-[100%] left-0" id="dropdownMenu">
-                        <div class="border-b-1">
-                            <a href="bankaccount.html" class="hover:text-[blue] font-bold transition-all ease-out duration-300 w-[100%] pb-[8px] flex justify-center text-center">Bank Account</a>
-                        </div>
-                        <div class="border-b-1">
-                            <a href="" class="hover:text-[blue] font-bold transition-all ease-out duration-300 w-[100%] pb-[8px] flex justify-center text-center">Credit Cards</a>
-                        </div>
-                        <div class="border-b-1">
-                            <a href="mortgages.html" class="hover:text-[blue] font-bold transition-all ease-out duration-300 w-[100%] pb-[8px] flex justify-center text-center">Mortgages</a>
-                        </div>
-                    </div>
+            <div id="demolish" class="overflow-hidden max-h-0 transition-[max-height] duration-500 ease-in-out lg:hidden bg-white w-full shadow-lg rounded-b-md text-gray-700">
+                <!-- Header row inside mobile menu -->
+
+                <!-- Personal dropdown -->
+                <div id="dropdownMenu" class="hidden bg-white flex flex-col divide-y divide-gray-200 font-medium px-4 py-3 space-y-2 text-left">
+                    <a href="bankaccount.html" class="block py-3 hover:text-blue-600 hover:bg-gray-50">Bank Account</a>
+                    <a href="#" class="block py-3 hover:text-blue-600 hover:bg-gray-50">Credit Cards</a>
+                    <a href="mortgages.html" class="block py-3 hover:text-blue-600 hover:bg-gray-50">Mortgages</a>
                 </div>
-                <!-- Mobile Menu -->
-                <div class="flex flex-col divide-y divide-gray-300">
-                    <a href="business.html" class="hover:text-[blue] font-bold transition-all ease-out duration-300 py-2 w-[100%] ">Business</a>
-                    <a href="commercial.html" class="hover:text-[blue] font-bold transition-all ease-out duration-300 py-2 w-[100%] ">Commercial</a>
-                    <a href="investment.html" class="hover:text-[blue] font-bold transition-all ease-out duration-300 py-2 w-[100%] ">Investments</a>
-                    <a href="loan.html" class="hover:text-[blue] font-bold transition-all ease-out duration-300 py-2 w-[100%] ">Loans</a>
-                    <a href="insurance.html" class="hover:text-[blue] font-bold transition-all ease-out duration-300 py-2 w-[100%] ">Insurance</a>
-                    <a href="about.html" class="hover:text-[blue] font-bold transition-all ease-out duration-300 py-2 w-[100%] ">About Us</a>
-                    <a href="wealth.html" class="hover:text-[blue] font-bold transition-all ease-out duration-300 py-2 w-[100%] ">Wealth</a>
+
+                <!-- Mobile Menu Links -->
+                <div class="flex flex-col divide-y divide-gray-200 font-medium px-4 py-3">
+                    <div class="flex items-center justify-between px-4 py-3 border-b">
+                        <span class="py-3 hover:text-blue-600 hover:bg-gray-50">Personal</span>
+                        <div class="flex items-center gap-2">
+                            <button id="personalToggle" class="flex items-center gap-2 text-gray-800" onclick="togglePersonal()" aria-expanded="false" aria-controls="dropdownMenu">
+                                <span id="plusIcon" class="text-xl">+</span>
+                                <span id="minusIcon" class="text-xl hidden">−</span>
+                            </button>
+                        </div>
+                    </div>
+                    <a href="business.html" class="py-3 hover:text-blue-600 hover:bg-gray-50">Business</a>
+                    <a href="commercial.html" class="py-3 hover:text-blue-600 hover:bg-gray-50">Commercial</a>
+                    <a href="investment.html" class="py-3 hover:text-blue-600 hover:bg-gray-50">Investments</a>
+                    <a href="loan.html" class="py-3 hover:text-blue-600 hover:bg-gray-50">Loans</a>
+                    <a href="insurance.html" class="py-3 hover:text-blue-600 hover:bg-gray-50">Insurance</a>
+                    <a href="about.html" class="py-3 hover:text-blue-600 hover:bg-gray-50">About Us</a>
+                    <a href="wealth.html" class="py-3 hover:text-blue-600 hover:bg-gray-50">Wealth</a>
                 </div>
             </div>
         </div>
@@ -274,7 +274,7 @@
         </div>
         <div class="flex justify-center mt-[20px] gap-2">
             <p class="text-[gray]"> > |</p>
-            <a href="terms.html" class="text-[#007bd8] font-semibold">Terms</a>
+            <a href="terms.html" class="text-[#007bd8] ">Terms</a>
         </div>
         <div class="text-center mt-[20px] pb-[30px]">
             <p class="text-[#5D7079]">Copyright @ 2025 WealthTrust FinancialInc. All Rights Reserved.</p>
